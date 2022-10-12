@@ -125,6 +125,7 @@ body,
 .address-link {
   font-style: normal;
   color: var(--color-text-s);
+  fill: var(--color-text-s);
 }
 
 .address-link:hover,
@@ -132,6 +133,12 @@ body,
 .nav-link:hover,
 .nav-link:focus {
   color: var(--color-blue);
+  fill: var(--color-blue);
+}
+
+.mailto-icon,
+.tel-icon {
+  margin-right: 10px;
 }
 
 /*Footer*/
@@ -167,8 +174,13 @@ body,
 
 /* Головна - main */
 .hero {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
   padding-block: 200px;
   background: var(--color-f-bg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/main/bghero.jpg);
 }
 
 .hero-title {
@@ -219,6 +231,21 @@ body,
 
 .features--item {
   flex-basis: 270px;
+}
+
+.features-box {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+.features-icon {
+  display: block;
+  width: 70px;
+  height: 70px;
+  fill: var(--color-text-p);
+  --color3: var(--color-blue);
 }
 
 .features--title {
@@ -340,3 +367,22 @@ body,
   letter-spacing: 0.03em;
   color: var(--color-text-s);
 }
+
+/* svg */
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
