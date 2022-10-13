@@ -1,15 +1,17 @@
 /* global */
 
 :root {
-  --color-text-p: #212121;
-  --color-text-s: #757575;
+  --color-dark: #212121;
+  --color-grey: #757575;
+  --color-c-grey: #afb1b8;
   --color-blue: #2196f3;
-  --color-c-logo: #000000;
+  --color-black: #000000;
   --color-c-blue: #188ce8;
   --color-f-bg: #2f303a;
-  --color-bg: #f5f4fa;
+  --color-l-grey: #f5f4fa;
   --color-white: #ffffff;
   --color-address-g: rgba(255, 255, 255, 0.6);
+  --color-socials-bg: rgba(255, 255, 255, 0.1);
   --font-roboto: 'Roboto', sans-serif;
   --font-raleway: 'Raleway', sans-serif;
   --border-portfolio: 1px solid #ececec;
@@ -20,7 +22,7 @@ body,
 .link,
 .pointer {
   font-family: var(--font-roboto);
-  color: var(--color-text-p);
+  color: var(--color-dark);
 }
 
 .container {
@@ -73,6 +75,12 @@ body,
   max-width: 100%;
 }
 
+.socials--icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
 /* header */
 .head {
   border-bottom: var(--border-portfolio);
@@ -109,7 +117,7 @@ body,
 }
 
 .c-logo {
-  color: var(--color-c-logo);
+  color: var(--color-black);
 }
 
 .nav-link,
@@ -124,8 +132,8 @@ body,
 
 .address-link {
   font-style: normal;
-  color: var(--color-text-s);
-  fill: var(--color-text-s);
+  color: var(--color-grey);
+  fill: var(--color-grey);
 }
 
 .address-link:hover,
@@ -146,6 +154,11 @@ body,
 .footer {
   padding-block: 60px;
   background: var(--color-f-bg);
+}
+
+.footer-flex {
+  display: flex;
+  gap: 70px;
 }
 
 .footer--logo {
@@ -170,6 +183,32 @@ body,
 .address-mailto,
 .address-tel {
   color: var(--color-address-g);
+}
+
+.socials {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.footer-socials--link {
+  fill: var(--color-white);
+  background-color: var(--color-socials-bg);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.footer-socials--link:hover,
+.footer-socials--link:focus {
+  background-color: var(--color-blue);
 }
 
 /* Головна - main */
@@ -244,8 +283,8 @@ body,
   display: block;
   width: 70px;
   height: 70px;
-  fill: var(--color-text-p);
-  --color3: var(--color-blue);
+  fill: var(--color-dark);
+  --c-a: var(--color-blue);
 }
 
 .features--title {
@@ -262,11 +301,12 @@ body,
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--color-text-s);
+  color: var(--color-c-grey);
 }
 
 .about-title,
-.team-title {
+.team-title,
+.clients-title {
   margin: 0 0 50px 0;
   font-weight: 700;
   font-size: 36px;
@@ -276,7 +316,7 @@ body,
 }
 
 .team {
-  background: var(--color-bg);
+  background: var(--color-l-grey);
 }
 
 .team-wrapper {
@@ -302,12 +342,70 @@ body,
 }
 
 .team--text {
-  margin: 0;
+  margin: 0 0 16px 0;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--color-text-s);
+  color: var(--color-grey);
+}
+
+.team-socials,
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.team-socials--link,
+.footer-socials--link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+}
+
+.team-socials--link {
+  fill: var(--color-c-grey);
+}
+
+.team-socials--link:hover,
+.team-socials--link:focus {
+  fill: var(--color-white);
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+
+.clients-link {
+  display: block;
+  padding: 16px 32px;
+  fill: var(--color-c-grey);
+  border: 1px solid var(--color-c-grey);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--color-blue);
+  border: 1px solid var(--color-blue);
+}
+
+.client-icon {
+  display: block;
+  width: 106px;
+  height: 60px;
 }
 
 /*Main - Портфоліо*/
@@ -327,7 +425,7 @@ body,
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-  background: var(--color-bg);
+  background: var(--color-l-grey);
 }
 
 .filter-btn:hover,
@@ -365,24 +463,11 @@ body,
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: var(--color-text-s);
+  color: var(--color-grey);
 }
 
-/* svg */
-
-.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+.project-item:hover,
+.project-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
-/* ==========================================
-Single-colored icons can be modified like so:
-.icon-name {
-  font-size: 32px;
-  color: red;
-}
-========================================== */
