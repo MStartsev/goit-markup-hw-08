@@ -686,7 +686,7 @@ body,
 }
 
 .is-hidden {
-  opacity: 0.2;
+  opacity: 0;
   visibility: hidden;
   pointer-events: none;
   background-color: rgba(0, 0, 0, 0);
@@ -695,12 +695,16 @@ body,
 }
 
 .is-hidden:not(.not-hidden) {
-  transition: opacity 400ms var(--animation-cubic), visibility 400ms var(--animation-cubic),
-    box-shadow 400ms var(--animation-cubic), background-color 200ms var(--animation-cubic) 200ms;
-  -webkit-transition: opacity 400ms var(--animation-cubic), visibility 400ms var(--animation-cubic);
-  -moz-transition: opacity 400ms var(--animation-cubic), visibility 400ms var(--animation-cubic);
-  -ms-transition: opacity 400ms var(--animation-cubic), visibility 400ms var(--animation-cubic);
-  -o-transition: opacity 400ms var(--animation-cubic), visibility 400ms var(--animation-cubic);
+  transition: opacity 700ms var(--animation-cubic), visibility 750ms var(--animation-cubic),
+    box-shadow 250ms var(--animation-cubic), background-color 250ms var(--animation-cubic) 250ms;
+  -webkit-transition: opacity 700ms var(--animation-cubic), visibility 750ms var(--animation-cubic),
+    box-shadow 250ms var(--animation-cubic), background-color 250ms var(--animation-cubic) 250ms;
+  -moz-transition: opacity 700ms var(--animation-cubic), visibility 750ms var(--animation-cubic),
+    box-shadow 250ms var(--animation-cubic), background-color 250ms var(--animation-cubic) 250ms;
+  -ms-transition: opacity 700ms var(--animation-cubic), visibility 750ms var(--animation-cubic),
+    box-shadow 250ms var(--animation-cubic), background-color 250ms var(--animation-cubic) 250ms;
+  -o-transition: opacity 700ms var(--animation-cubic), visibility 750ms var(--animation-cubic),
+    box-shadow 250ms var(--animation-cubic), background-color 250ms var(--animation-cubic) 250ms;
 }
 
 .btn-modal-close {
