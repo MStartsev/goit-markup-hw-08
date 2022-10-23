@@ -95,24 +95,6 @@ body,
   cursor: pointer;
 }
 
-/* .link,
-.pointer {
-  transition: backcolor 250ms var(--animation-cubic), color 250ms var(--animation-cubic),
-    fill 250ms var(--animation-cubic), box-shadow 250ms var(--animation-cubic) 80ms;
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
-}
-
-.link {
-  transition: color 250ms var(--animation-cubic), fill 250ms var(--animation-cubic);
-  -webkit-transition: color 250ms var(--animation-cubic), fill 250ms var(--animation-cubic);
-  -moz-transition: color 250ms var(--animation-cubic), fill 250ms var(--animation-cubic);
-  -ms-transition: color 250ms var(--animation-cubic), fill 250ms var(--animation-cubic);
-  -o-transition: color 250ms var(--animation-cubic), fill 250ms var(--animation-cubic);
-} */
-
 .visually-hidden {
   width: 1px;
   height: 1px;
