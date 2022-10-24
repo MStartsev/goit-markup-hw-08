@@ -275,11 +275,21 @@ body,
 .email-inp--submit {
   width: 356px;
   height: 48px;
-
+  padding-left: 16px;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  transition: color 250ms var(--animation-cubic), border-color 250ms var(--animation-cubic),
+    box-shadow 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
+  -webkit-transition: color 250ms var(--animation-cubic), border-color 250ms var(--animation-cubic),
+    box-shadow 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
+  -moz-transition: color 250ms var(--animation-cubic), border-color 250ms var(--animation-cubic),
+    box-shadow 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
+  -ms-transition: color 250ms var(--animation-cubic), border-color 250ms var(--animation-cubic),
+    box-shadow 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
+  -o-transition: color 250ms var(--animation-cubic), border-color 250ms var(--animation-cubic),
+    box-shadow 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
 }
 
 .email-inp--submit:hover,
@@ -289,6 +299,17 @@ body,
   box-shadow: 1px 1px 2px 0 var(--color-c-blue);
   opacity: 0.5;
   outline: 1px solid var(--color-c-blue);
+}
+
+.email-inp--submit::placeholder {
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.email-inp--submit:hover::placeholder,
+.email-inp--submit:focus::placeholder {
+  color: var(--color-c-blue);
 }
 
 .email-btn--submit,
@@ -884,7 +905,34 @@ body,
 .modal-input:active + .form-icon,
 .form-icon:active {
   fill: var(--color-c-blue);
-  outline: 1px solid var(--color-c-blue);
+  outline: none;
+}
+
+.i-checkbox,
+.i-checkbox-activ {
+  bottom: 5px;
+  transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
+  -webkit-transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
+  -moz-transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
+  -ms-transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
+  -o-transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
+}
+
+.i-checkbox-activ,
+.modal-checkbox,
+.modal-checkbox:checked ~ .i-checkbox {
+  opacity: 0;
+}
+
+.item-checkbox:hover .i-checkbox,
+.item-checkbox:focus .i-checkbox {
+  fill: var(--color-c-blue);
+}
+
+.modal-checkbox:checked + .i-checkbox-activ {
+  opacity: 1;
+  fill: var(--color-c-blue);
+  --c-b: var(--color-white);
 }
 
 .modal-textarea {
@@ -916,16 +964,6 @@ body,
   border-color: var(--color-c-blue);
   outline: 1px solid var(--color-c-blue);
 }
-
-/* .email-inp--submit:hover,
-.email-inp--submit:focus,
-.email-inp--submit:active {
-  border-color: var(--color-c-blue);
-  box-shadow: 1px 1px 2px 0 var(--color-c-blue);
-  opacity: 0.5;
-  outline: 1px solid var(--color-c-blue);
-} */
-
 .checkbox-wrap {
   margin: 10px 0 20px 0;
 }
@@ -935,7 +973,7 @@ body,
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 8px;
+  gap: 9px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;

@@ -408,6 +408,19 @@
           </ul>
         </div>
 
+        <div class="footer-wrap">
+          <strong class="email-alert">Підпишіться на розсилку</strong>
+          <form class="email-list" id="email-form" action="#" method="post">
+            <input class="email-inp--submit" type="email" name="email-signup" placeholder="E-mail">
+            <button class="email-btn--submit pointer" type="submit">
+              <span>Підписатися</span>
+              <svg class="socials--icon" width="24" height="24">
+                <use href="./images/sprites/sprite.svg#i-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+
       </div>
     </div>
   </footer>
@@ -428,29 +441,30 @@
 
         <form class="modal-form">
           <div class="form-group" role="group" aria-labelledby="modal-form-head">
+
             <h2 class="modal-title" id="modal-form-head">Залиште свої дані, ми вам передзвонимо</h2>
 
             <label class="modal-item" for="m-text">
               Ім'я
-              <input class="modal-input" type="text" name="m-text" id="m-text">
+              <input class="modal-input" type="text" name="m-text">
               <svg class="form-icon" width="18" height="18">
-                <use href="./images/sprites/sprite.svg#i-x"></use>
+                <use href="./images/sprites/sprite.svg#i-person"></use>
               </svg>
             </label>
 
             <label class="modal-item" class="modal-item" for="m-tel">
               Телефон
-              <input class="modal-input pointer" type="tel" name="m-tel" id="m-tel">
+              <input class="modal-input pointer" type="tel" name="m-tel">
               <svg class="form-icon" width="18" height="18">
-                <use href="./images/sprites/sprite.svg#i-x"></use>
+                <use href="./images/sprites/sprite.svg#i-phone"></use>
               </svg>
             </label>
 
             <label class="modal-item" for="m-email">
               Пошта
-              <input class="modal-input pointer" type="email" name="m-email" id="m-email">
+              <input class="modal-input pointer" type="email" name="m-email">
               <svg class="form-icon" width="18" height="18">
-                <use href="./images/sprites/sprite.svg#i-x"></use>
+                <use href="./images/sprites/sprite.svg#i-email"></use>
               </svg>
             </label>
 
@@ -460,10 +474,17 @@
             </label>
 
             <span class="modal-item checkbox-wrap">
-              <label class=" item-checkbox" for="m-checkbox">
-                <input class="modal-checkbox pointer" type="checkbox" name="m-checkbox" id="m-checkbox">
+              <label class=" item-checkbox pointer" for="m-checkbox">
+                <input class="modal-checkbox pointer" type="checkbox" name="m-checkbox">
+                <svg class="form-icon i-checkbox-activ" width="18" height="18">
+                  <use href="./images/sprites/sprite.svg#i-checkbox-activ"></use>
+                </svg>
+                <svg class="form-icon i-checkbox" width="18" height="18">
+                  <use href="./images/sprites/sprite.svg#i-checkbox"></use>
+                </svg>
                 Погоджуюся з розсилкою та приймаю
                 <a class="checkbox-link" href="#" target="_blank" rel="noopener noreferrer">Умови договору</a>
+
               </label>
             </span>
 
