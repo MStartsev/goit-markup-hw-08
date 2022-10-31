@@ -829,34 +829,48 @@ body,
 }
 
 .modal-title {
-  margin: 0 0 2px 0;
+  margin: 0 0 12px 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-dark);
+  cursor: default;
 }
 
 .form-group {
   display: flex;
+  fill: var(--color-dark);
+  min-width: 100%;
+  flex-direction: column;
+}
+
+.modal-wrap {
+  display: inherit;
   gap: 10px;
   min-width: 100%;
   flex-direction: column;
-  fill: var(--color-dark);
 }
 
 .modal-item,
-.checkbox-wrap,
+.item-checkbox,
 .item-submit {
   display: inherit;
   flex-direction: column;
 }
 
-.modal-item {
+.modal-item,
+.input-thumb {
   position: relative;
+}
+
+.label-text {
+  display: block;
+  margin: 0 0 4px 0;
+  padding: 0;
   font-size: 12px;
-  line-height: 1.67;
+  line-height: 1.16;
   letter-spacing: 0.01em;
 }
 
@@ -865,7 +879,7 @@ body,
   display: block;
   width: 100%;
   height: 38px;
-  padding-left: 42px;
+  padding: 0 0 0 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   font-size: 16px;
@@ -885,13 +899,9 @@ body,
 
 .form-icon {
   position: absolute;
-  bottom: 10px;
+  top: 50%;
   left: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 18px;
-  height: 18px;
+  transform: translateY(-50%);
   transition: fill 250ms var(--animation-cubic);
   -webkit-transition: fill 250ms var(--animation-cubic);
   -moz-transition: fill 250ms var(--animation-cubic);
@@ -911,7 +921,6 @@ body,
 
 .i-checkbox,
 .i-checkbox-activ {
-  bottom: 5px;
   transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
   -webkit-transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
   -moz-transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
@@ -965,16 +974,13 @@ body,
   border-color: var(--color-c-blue);
   outline: 1px solid var(--color-c-blue);
 }
-.checkbox-wrap {
-  margin: 10px 0 20px 0;
-}
 
 .item-checkbox {
   display: inherit;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  gap: 9px;
+  margin: 20px 0 30px 0;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -982,11 +988,11 @@ body,
 }
 
 .checkbox-link {
+  margin-left: 4px;
   text-decoration-line: underline;
   color: var(--color-blue);
 }
 
-.item-submit {
-  display: inherit;
-  align-items: center;
+.m-submit {
+  margin: 0 auto;
 }
