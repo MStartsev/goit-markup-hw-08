@@ -381,7 +381,7 @@ body,
   color: var(--color-white);
 }
 
-.hero-order {
+.hero__button {
   display: block;
   padding: 10px 32px 10px 32px;
   margin-inline: auto;
@@ -401,8 +401,8 @@ body,
   -o-transition: background-color 250ms var(--animation-cubic);
 }
 
-.hero-order:hover,
-.hero-order:focus {
+.hero__button:hover,
+.hero__button:focus {
   background: var(--color-c-blue);
 }
 
