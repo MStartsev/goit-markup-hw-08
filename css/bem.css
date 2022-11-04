@@ -321,7 +321,7 @@ body,
 }
 
 .subscription__button,
-.m-submit {
+.form__submit {
   display: flex;
   gap: 10px;
   min-width: 200px;
@@ -352,8 +352,8 @@ body,
 
 .subscription__button:hover,
 .subscription__button:focus,
-.m-submit:hover,
-.m-submit:focus {
+.form__submit:hover,
+.form__submit:focus {
   background-color: var(--color-c-blue);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -925,8 +925,8 @@ body,
   outline: none;
 }
 
-.i-checkbox,
-.i-checkbox-activ {
+.checkbox,
+.checkbox--checked {
   transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
   -webkit-transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
   -moz-transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
@@ -934,18 +934,18 @@ body,
   -o-transition: fill 250ms var(--animation-cubic), opacity 250ms var(--animation-cubic);
 }
 
-.i-checkbox-activ,
-.modal-checkbox,
-.modal-checkbox:checked ~ .i-checkbox {
+.checkbox--checked,
+.form__checkbox,
+.form__checkbox:checked ~ .checkbox {
   opacity: 0;
 }
 
-.item-checkbox:hover .i-checkbox,
-.item-checkbox:focus .i-checkbox {
+.item-checkbox:hover .checkbox,
+.item-checkbox:focus .checkbox {
   fill: var(--color-c-blue);
 }
 
-.modal-checkbox:checked + .i-checkbox-activ {
+.form__checkbox:checked + .checkbox--checked {
   opacity: 1;
   fill: var(--color-c-blue);
   --c-b: var(--color-white);
@@ -999,6 +999,6 @@ body,
   color: var(--color-blue);
 }
 
-.m-submit {
+.form__submit {
   margin: 0 auto;
 }
