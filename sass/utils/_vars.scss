@@ -1,0 +1,44 @@
+$color: (
+  'dark': #212121,
+  'grey': #757575,
+  'c-grey': #afb1b8,
+  'blue': #2196f3,
+  'black': #000000,
+  'c-blue': #188ce8,
+  'f-bg': #2f303a,
+  'l-grey': #f5f4fa,
+  'white': #ffffff,
+  'address-g': rgba(255, 255, 255, 0.6),
+  'socials-bg': rgba(255, 255, 255, 0.1),
+  'backdrop': rgba(0, 0, 0, 0.2),
+);
+
+@function color($key) {
+  @return map-get($color, $key);
+}
+
+$font: (
+  'roboto': (
+    'Roboto',
+    sans-serif,
+  ),
+  'raleway': (
+    'Raleway',
+    sans-serif,
+  ),
+);
+
+@function font($key) {
+  @return map-get($font, $key);
+}
+
+$border: (
+  'portfolio': 1px solid #ececec,
+  'project': 1px solid #eeeeee,
+);
+
+@function border($key) {
+  @return map-get($border, $key);
+}
+
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);

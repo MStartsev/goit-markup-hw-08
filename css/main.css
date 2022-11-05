@@ -1,0 +1,9 @@
+body,
+.link,
+.pointer {
+  color: #212121;
+}
+
+.header {
+  border-bottom: var(--border-portfolio);
+}/*# sourceMappingURL=main.css.map */

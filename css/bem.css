@@ -68,11 +68,11 @@ body,
   list-style: none;
 }
 
-.current {
+.nav__link--current {
   position: relative;
   color: var(--color-blue);
 }
-.current::before {
+.nav__link--current::before {
   display: block;
   content: '';
   position: absolute;
@@ -128,7 +128,7 @@ body,
 /***************************************/
 
 /* header */
-.head {
+.header {
   border-bottom: var(--border-portfolio);
 }
 
@@ -161,12 +161,12 @@ body,
   padding-bottom: 24px;
 }
 
-.c-logo {
+.nav__logo--contrast {
   color: var(--color-black);
 }
 
 .nav__link,
-.head__link {
+.header__link {
   display: inherit;
   align-items: center;
   font-weight: 500;
@@ -221,7 +221,7 @@ body,
   margin-bottom: 9px;
 }
 
-.footer__c-logo,
+.footer__logo--contrast,
 .address__map {
   color: var(--color-white);
 }
