@@ -1,0 +1,38 @@
+.footer {
+  padding-block: 60px;
+  background: color(_f-bg);
+
+  &__flex {
+    display: flex;
+    gap: 70px;
+    align-items: baseline;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+
+    &--contrast {
+      color: color(_white);
+    }
+  }
+
+  &__item {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    transition: color 250ms $cubic;
+    -webkit-transition: color 250ms $cubic;
+    -moz-transition: color 250ms $cubic;
+    -ms-transition: color 250ms $cubic;
+    -o-transition: color 250ms $cubic;
+  }
+}

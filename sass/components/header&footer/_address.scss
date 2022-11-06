@@ -1,0 +1,24 @@
+.address {
+  gap: 50px;
+
+  &__link {
+    font-style: normal;
+    color: color(_grey);
+    fill: color(_grey);
+
+    &:hover,
+    &:focus {
+      color: color(_blue);
+      fill: color(_blue);
+    }
+  }
+
+  &__map {
+    color: color(_white);
+  }
+
+  &__mailto,
+  &__tel {
+    color: color(_address-g);
+  }
+}

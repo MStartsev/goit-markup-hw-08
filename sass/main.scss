@@ -1,5 +1,12 @@
 @import './utils/vars';
 @import './utils/base';
+@import './utils/scrollbar';
 @import './utils/containers';
 
-@import './components/header/header';
+@import './components/section';
+@import './components/logo';
+
+@import './components/header&footer/header';
+@import './components/header&footer/nav';
+@import './components/header&footer/address';
+@import './components/header&footer/footer';
