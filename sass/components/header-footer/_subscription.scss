@@ -1,0 +1,70 @@
+.subscription {
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    @include font-fw-fs-lh-ls(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: color(_white);
+  }
+
+  &__form {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__input {
+    width: 356px;
+    height: 48px;
+    padding-left: 16px;
+    color: color(_white);
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    @include transition(color border-color box-shadow opacity, 250ms, $cubic);
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: color(_c-blue);
+      box-shadow: 1px 1px 2px 0 color(_c-blue);
+      opacity: 0.5;
+      outline: 1px solid color(_c-blue);
+    }
+
+    &::placeholder {
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: color(_address-g);
+    }
+
+    &:hover::placeholder,
+    &:focus::placeholder {
+      color: color(_c-blue);
+    }
+  }
+
+  &__button {
+    display: flex;
+    gap: 10px;
+    min-width: 200px;
+    max-width: 200px;
+    padding-block: 10px;
+    @include font-fw-fs-lh-ls(700, 16px, 1.88, 0.06em);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: color(_white);
+    fill: color(_white);
+    border: none;
+    background: color(_blue);
+    border-radius: 4px;
+    @include transition(background-color box-shadow, 250ms, $cubic);
+
+    &hover,
+    &:focus {
+      background-color: color(_c-blue);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

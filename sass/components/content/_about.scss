@@ -1,0 +1,21 @@
+.about {
+  padding-top: 0;
+
+  &__item {
+    position: relative;
+  }
+
+  &__s-title {
+    display: block;
+    padding-block: 27px;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    @include font-fw-fs-lh-ls(700, 14px, 1.14, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    color: color(_white);
+    background: rgba(47, 48, 58, 0.8);
+  }
+}

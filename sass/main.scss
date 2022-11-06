@@ -1,15 +1,15 @@
 @import './vendors/modern-normalize';
 
 @import './utils/vars';
+@import './utils/mixin';
 
 @import './base/base';
 @import './base/scrollbar';
-@import './base/containers';
 
-@import './layouts/logo';
-@import './layouts/header';
-@import './layouts/nav';
-@import './layouts/address';
-@import './layouts/footer';
-
+@import './components/containers';
+@import './components/icon';
 @import './components/section';
+
+@import './components/header-footer';
+
+@import './components/content';

@@ -1,0 +1,36 @@
+.features {
+  &__s-title {
+    margin: 0;
+    @include font-fw-fs-lh-ls(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+  }
+
+  &__box {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    background-color: color(_l-grey);
+    border-radius: 4px;
+  }
+
+  &__text {
+    margin: 10px 0 0 0;
+    @include font-fw-fs-lh-ls(400, 14px, 1.71, 0.03em);
+    color: color(_c-grey);
+  }
+
+  &__item {
+    flex-basis: 270px;
+  }
+
+  &__icon {
+    display: block;
+    width: 70px;
+    height: 70px;
+    fill: color(_dark);
+    --c-a: color(_blue);
+  }
+}

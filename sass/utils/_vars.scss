@@ -1,3 +1,6 @@
+$content-width: 1200px;
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);
+
 $color: (
   _dark: #212121,
   _grey: #757575,
@@ -40,5 +43,3 @@ $border: (
 @function border($key) {
   @return map-get($border, $key);
 }
-
-$cubic: cubic-bezier(0.4, 0, 0.2, 1);

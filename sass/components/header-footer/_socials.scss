@@ -1,0 +1,33 @@
+.socials {
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    @include font-fw-fs-lh-ls(700, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: color(_white);
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  &__link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    fill: color(_white);
+    background-color: color(_socials-bg);
+    @include border-radius(50%);
+    @include transition(background-color fill, 250ms, $cubic);
+
+    &:hover,
+    &:focus {
+      background-color: color(_blue);
+    }
+  }
+}

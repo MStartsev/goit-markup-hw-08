@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: $content-width;
   margin-inline: auto;
   padding-inline: 15px;
 }
@@ -9,4 +9,14 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+}
+
+.list-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.wrapper {
+  padding-block: 30px;
 }

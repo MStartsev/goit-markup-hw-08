@@ -1,4 +1,10 @@
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  &__title {
+    margin: 0 0 50px 0;
+    @include font-fw-fs-lh-ls(700, 36px, 1.17, 0.03em);
+    text-align: center;
+  }
 }
