@@ -2,6 +2,7 @@
 
 @import './utils/vars';
 @import './utils/mixin';
+@import './utils/visually-hidden';
 
 @import './base/base';
 @import './base/scrollbar';
@@ -13,3 +14,5 @@
 @import './components/header-footer';
 
 @import './components/content';
+
+@import './components/modal-win';

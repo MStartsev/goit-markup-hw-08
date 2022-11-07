@@ -61,7 +61,7 @@
     border-radius: 4px;
     @include transition(background-color box-shadow, 250ms, $cubic);
 
-    &hover,
+    &:hover,
     &:focus {
       background-color: color(_c-blue);
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

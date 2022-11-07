@@ -1,0 +1,38 @@
+.checkbox {
+  display: inherit;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 30px 0;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: color(_grey);
+
+  &__link {
+    margin-left: 4px;
+    text-decoration-line: underline;
+    color: color(_blue);
+  }
+
+  &__icon,
+  &__icon--checked {
+    @include transition(fill opacity, 250ms, $cubic);
+  }
+
+  &__icon--checked,
+  &__input:checked ~ &__icon {
+    opacity: 0;
+  }
+
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: color(_blue);
+  }
+
+  &__input:checked + &__icon--checked {
+    opacity: 1;
+    fill: color(_c-blue);
+    --c-b: var(--color-white);
+  }
+}

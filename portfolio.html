@@ -10,37 +10,44 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./css/modern-normalize.css">
-  <link rel="stylesheet" href="./css/styles.css">
+  <!-- <link rel="stylesheet" href="./css/modern-normalize.css"> -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/bem.css">
 </head>
 
 <body>
 
-  <header class="head">
+  <header class="header">
     <div class="container">
       <div class="container-flex">
 
-        <nav class="head-nav container-flex">
-          <a href="./" class="link logo head--logo" lang="en">Web<span class="c-logo">Studio</span></a>
-          <ul class="list nav-list head--nav-list container-flex">
-            <li class="item container-flex"><a class="link nav-link" href="./">Студія</a></li>
-            <li class="item container-flex"><a class="link nav-link current" href="./portfolio.html">Портфоліо</a></li>
-            <li class="item container-flex"><a class="link nav-link" href="#contacts">Контакти</a></li>
+        <nav class="nav container-flex">
+          <a href="./" class="link logo nav__logo" lang="en">Web<span class="nav__logo--contrast">Studio</span></a>
+          <ul class="list nav__list container-flex">
+            <li class="item container-flex">
+              <a class="link nav__link" href="./">Студія</a>
+            </li>
+            <li class="item container-flex">
+              <a class="link nav__link nav__link--current" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="item container-flex">
+              <a class="link nav__link" href="#contacts">Контакти</a>
+            </li>
           </ul>
         </nav>
 
-        <ul class="list address-list head--address-list container-flex">
+        <ul class="list address container-flex">
           <li class="item container-flex">
-            <a class="link address-link head--address-link" href="mailto:info@devstudio.com">
-              <svg class="mailto-icon" width="16" height="12">
+            <a class="link address__link header__link" href="mailto:info@devstudio.com">
+              <svg class="icon__mailto" width="16" height="12">
                 <use href="./images/sprites/sprite.svg#i-envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
           <li class="item container-flex">
-            <a class="link address-link head--address-link" href="tel:+380961111111">
-              <svg class="tel-icon" width="10" height="16">
+            <a class="link address__link header__link" href="tel:+380961111111">
+              <svg class="icon__tel" width="10" height="16">
                 <use href="./images/sprites/sprite.svg#i-vector"></use>
               </svg>
               +38 096 111 11 11
@@ -60,132 +67,132 @@
         <h1 class="visually-hidden">Наші проекти</h1>
         <ul class="list filters">
           <li class="item">
-            <button class="filter-btn pointer oll" type="button">Усі</button>
+            <button class="filters__btn pointer oll" type="button">Усі</button>
           </li>
           <li class="item">
-            <button class="filter-btn pointer web-sites" type="button">Веб-сайти</button>
+            <button class="filters__btn pointer web-sites" type="button">Веб-сайти</button>
           </li>
           <li class="item">
-            <button class="filter-btn pointer applications" type="button">Додатки</button>
+            <button class="filters__btn pointer applications" type="button">Додатки</button>
           </li>
           <li class="item">
-            <button class="filter-btn pointer design" type="button">Дизайн</button>
+            <button class="filters__btn pointer design" type="button">Дизайн</button>
           </li>
           <li class="item">
-            <button class="filter-btn pointer marketing" type="button">Маркетинг</button>
+            <button class="filters__btn pointer marketing" type="button">Маркетинг</button>
           </li>
         </ul>
 
-        <ul class="list projects">
-          <li class="item project-item web-site ">
-            <a class="link project-link" href="#" target="_blank" rel="noopener noreferrer">
+        <ul class="list list-flex projects">
+          <li class="item web-site ">
+            <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
               <img src="./images/portfolio/tehnokrack.jpg" alt="Презентація веб-сайту Технокряк" class="img">
               <div class="hover-box">
                 <p class="text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                   дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
               <div class="border-box">
-                <h2 class="project-title">Технокряк</h2>
-                <p class="project-text">Веб-сайт</p>
+                <h2 class="projects__title">Технокряк</h2>
+                <p class="projects__text">Веб-сайт</p>
               </div>
 
             </a>
           </li>
-          <li class="item project-item design">
-            <a class="link project-link" href="#" target="_blank" rel="noopener noreferrer">
+          <li class="item design">
+            <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
               <img src="./images/portfolio/poster.jpg" alt="Візуалізація ігрового моменту" class="img">
               <div class="hover-box">
                 <p class="text">New Orlean переможе!!!</p>
               </div>
               <div class="border-box">
-                <h2 class="project-title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
-                <p class="project-text">Дизайн</p>
+                <h2 class="projects__title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
+                <p class="projects__text">Дизайн</p>
               </div>
 
             </a>
           </li>
-          <li class="item project-item application">
-            <a class="link project-link" href="#" target="_blank" rel="noopener noreferrer">
+          <li class="item application">
+            <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
               <img src="./images/portfolio/seafood.jpg" alt="Логотип ресторану" class="img">
               <div class="hover-box">
                 <p class="text">Смачна рибка.</p>
               </div>
               <div class="border-box">
-                <h2 class="project-title">Ресторан <span lang="en">Seafood</span></h2>
-                <p class="project-text">Додаток</p>
+                <h2 class="projects__title">Ресторан <span lang="en">Seafood</span></h2>
+                <p class="projects__text">Додаток</p>
               </div>
 
             </a>
           </li>
-          <li class="item project-item marketing">
-            <a class="link project-link" href="#" target="_blank" rel="noopener noreferrer">
+          <li class="item marketing">
+            <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
               <img src="./images/portfolio/prime.jpg" alt="Фото продукції" class="img">
               <div class="hover-box">
                 <p class="text">Тілько у нас найкращі у світі вуха!</p>
               </div>
               <div class="border-box">
-                <h2 class="project-title">Проєкт <span lang="en">Prime</span></h2>
-                <p class="project-text">Маркетинг</p>
+                <h2 class="projects__title">Проєкт <span lang="en">Prime</span></h2>
+                <p class="projects__text">Маркетинг</p>
               </div>
             </a>
           </li>
-          <li class="item project-item application">
-            <a class="link project-link" href="#" target="_blank" rel="noopener noreferrer">
+          <li class="item application">
+            <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
               <img src="./images/portfolio/boxes.jpg" alt="Візуалізація продукту" class="img">
               <div class="hover-box">
                 <p class="text">Знайдемо розмір під Вас!</p>
               </div>
               <div class="border-box">
-                <h2 class="project-title">Проєкт <span lang="en">Boxes</span></h2>
-                <p class="project-text">Додаток</p>
+                <h2 class="projects__title">Проєкт <span lang="en">Boxes</span></h2>
+                <p class="projects__text">Додаток</p>
               </div>
             </a>
           </li>
-          <li class="item project-item web-site">
-            <a class="link project-link" href="#" target="_blank" rel="noopener noreferrer">
+          <li class="item web-site">
+            <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
               <img src="./images/portfolio/inspiration.jpg" alt="Презентація десктопної версії веб-сайту" class="img">
               <div class="hover-box">
                 <p class="text">Тепер користуватись стало ще зручніше</p>
               </div>
               <div class="border-box">
-                <h2 class="project-title" lang="en">Inspiration has no Borders</h2>
-                <p class="project-text">Веб-сайт</p>
+                <h2 class="projects__title" lang="en">Inspiration has no Borders</h2>
+                <p class="projects__text">Веб-сайт</p>
               </div>
             </a>
           </li>
-          <li class="item project-item design">
-            <a class="link project-link" href="#" target="_blank" rel="noopener noreferrer">
+          <li class="item design">
+            <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
               <img src="./images/portfolio/limitededition.jpg" alt="Фото сторінок видання" class="img">
               <div class="hover-box">
                 <p class="text">Про все на світі</p>
               </div>
               <div class="border-box">
-                <h2 class="project-title">Видання <span lang="en">Limited Edition</span></h2>
-                <p class="project-text">Дизайн</p>
+                <h2 class="projects__title">Видання <span lang="en">Limited Edition</span></h2>
+                <p class="projects__text">Дизайн</p>
               </div>
             </a>
           </li>
-          <li class="item project-item marketing">
-            <a class="link project-link" href="#" target="_blank" rel="noopener noreferrer">
+          <li class="item marketing">
+            <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
               <img src="./images/portfolio/lab.jpg" alt="Розробка концепції проекту" class="img">
               <div class="hover-box">
                 <p class="text">Вишукані прикраси лише ТУТ!</p>
               </div>
               <div class="border-box">
-                <h2 class="project-title">Проєкт LAB</h2>
-                <p class="project-text">Маркетинг</p>
+                <h2 class="projects__title">Проєкт LAB</h2>
+                <p class="projects__text">Маркетинг</p>
               </div>
             </a>
           </li>
-          <li class="item project-item application">
-            <a class="link project-link" href="#" target="_blank" rel="noopener noreferrer">
+          <li class="item application">
+            <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
               <img src="./images/portfolio/business.jpg" alt="Візуалізація продукту" class="img">
               <div class="hover-box">
                 <p class="text">Допоможемо розвинути Ваш бізнес</p>
               </div>
               <div class="border-box">
-                <h2 class="project-title" lang="en">Growing Business</h2>
-                <p class="project-text">Додаток</p>
+                <h2 class="projects__title" lang="en">Growing Business</h2>
+                <p class="projects__text">Додаток</p>
               </div>
             </a>
           </li>
@@ -198,52 +205,53 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-flex">
+      <div class="footer__flex">
 
-        <div class="footer-wrap">
-          <a href="./" class="link logo footer--logo" lang="en">Web<span class="c-logo footer--c-logo">Studio</span></a>
+        <div>
+          <a href="./" class="link logo footer__logo" lang="en">Web<span
+              class="footer__logo--contrast">Studio</span></a>
           <address id="contacts" class="address">
-            <ul class="list link-list">
-              <li class="item footer--item"><a class="link address-link footer--address-link address-map"
+            <ul class="list">
+              <li class="item footer__item"><a class="link address__link footer__link address__map"
                   href="http://maps.google.com/?q=м.+Київ,+пр-т+Лесі+Українки,+26" target="_blank"
                   rel="noreferrer noopener">м. Київ, пр-т Лесі Українки, 26</a></li>
-              <li class="item footer--item"><a class="link address-link footer--address-link address-mailto"
+              <li class="item footer__item"><a class="link address__link footer__link address__mailto"
                   href="mailto:info@devstudio.com">info@devstudio.com</a>
               </li>
-              <li class="item footer--item"><a class="link address-link footer--address-link address-tel"
+              <li class="item footer__item"><a class="link address__link footer__link address__tel"
                   href="tel:+380961111111">+38 096 111 11
                   11</a></li>
             </ul>
           </address>
         </div>
 
-        <div class="footer-wrap">
-          <strong class="socials">Приєднуйтесь</strong>
-          <ul class="list footer-socials">
+        <div class="socials">
+          <strong class="socials__title">Приєднуйтесь</strong>
+          <ul class="list socials__list">
             <li class="item">
-              <a href="#" class="link footer-socials--link" target="_blank" rel="noreferrer noopener">
-                <svg class="socials--icon">
+              <a href="#" class="link socials__link" target="_blank" rel="noreferrer noopener">
+                <svg class="icon">
                   <use href="./images/sprites/sprite.svg#i-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="item">
-              <a href="#" class="link footer-socials--link" target="_blank" rel="noreferrer noopener">
-                <svg class="socials--icon">
+              <a href="#" class="link socials__link" target="_blank" rel="noreferrer noopener">
+                <svg class="icon">
                   <use href="./images/sprites/sprite.svg#i-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="item">
-              <a href="#" class="link footer-socials--link" target="_blank" rel="noreferrer noopener">
-                <svg class="socials--icon">
+              <a href="#" class="link socials__link" target="_blank" rel="noreferrer noopener">
+                <svg class="icon">
                   <use href="./images/sprites/sprite.svg#i-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="item">
-              <a href="#" class="link footer-socials--link" target="_blank" rel="noreferrer noopener">
-                <svg class="socials--icon">
+              <a href="#" class="link socials__link" target="_blank" rel="noreferrer noopener">
+                <svg class="icon">
                   <use href="./images/sprites/sprite.svg#i-linkedin"></use>
                 </svg>
               </a>
@@ -251,13 +259,13 @@
           </ul>
         </div>
 
-        <div class="footer-wrap">
-          <strong class="email-alert">Підпишіться на розсилку</strong>
-          <form class="email-list" id="email-form" action="#" method="post">
-            <input class="email-inp--submit" type="email" name="email-signup" placeholder="E-mail">
-            <button class="email-btn--submit pointer" type="submit">
+        <div class="subscription">
+          <strong class="subscription__title">Підпишіться на розсилку</strong>
+          <form class="subscription__form" id="email-form" action="#" method="post">
+            <input class="subscription__input" type="email" name="email-signup" placeholder="E-mail">
+            <button class="subscription__button pointer" type="submit">
               <span>Підписатися</span>
-              <svg class="socials--icon" width="24" height="24">
+              <svg class="icon" width="24" height="24">
                 <use href="./images/sprites/sprite.svg#i-send"></use>
               </svg>
             </button>

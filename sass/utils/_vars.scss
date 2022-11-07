@@ -1,3 +1,23 @@
+:root {
+  --color-dark: #212121;
+  --color-grey: #757575;
+  --color-c-grey: #afb1b8;
+  --color-blue: #2196f3;
+  --color-black: #000000;
+  --color-c-blue: #188ce8;
+  --color-f-bg: #2f303a;
+  --color-l-grey: #f5f4fa;
+  --color-white: #ffffff;
+  --color-address-g: rgba(255, 255, 255, 0.6);
+  --color-socials-bg: rgba(255, 255, 255, 0.1);
+  --color-backdrop: rgba(0, 0, 0, 0.2);
+  --font-roboto: 'Roboto', sans-serif;
+  --font-raleway: 'Raleway', sans-serif;
+  --border-portfolio: 1px solid #ececec;
+  --border-project: 1px solid #eeeeee;
+  --animation-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 $content-width: 1200px;
 $cubic: cubic-bezier(0.4, 0, 0.2, 1);
 

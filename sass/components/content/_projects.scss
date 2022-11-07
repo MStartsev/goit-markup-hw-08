@@ -1,0 +1,37 @@
+.projects {
+  justify-content: center;
+
+  &__title {
+    margin: 0;
+    @include font-fw-fs-lh-ls(700, 18px, 2, 0.06em);
+  }
+  &__text {
+    margin: 4px 0 0 0;
+    @include font-fw-fs-lh-ls(400, 16px, 1.88, 0.03em);
+    color: color(_grey);
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    @include transition(box-shadow, 250ms, $cubic);
+
+    &:hover,
+    &:focus {
+      display: block;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .hover-box,
+    &:focus .hover-box {
+      opacity: 0.8;
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+    }
+  }
+}

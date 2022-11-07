@@ -1,0 +1,28 @@
+.filters {
+  width: 100%;
+  margin-bottom: 50px;
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+
+  &__btn {
+    padding: 6px 22px 6px 22px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    background: color(_l-grey);
+    @include transition(color background-color box-shadow, 250ms, $cubic, 0ms 50ms 100ms);
+
+    &:hover,
+    &:focus {
+      color: color(_white);
+      fill: color(_white);
+      background: color(_blue);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+  }
+}

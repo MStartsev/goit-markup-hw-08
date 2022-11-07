@@ -31,6 +31,6 @@
     width: 70px;
     height: 70px;
     fill: color(_dark);
-    --c-a: color(_blue);
+    --c-a: var(--color-blue);
   }
 }

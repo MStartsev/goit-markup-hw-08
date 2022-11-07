@@ -1,0 +1,116 @@
+.form {
+  &__title {
+    margin: 0 0 12px 0;
+    @include font-fw-fs-lh-ls(700, 20px, 1.15, 0.03em);
+    text-align: center;
+    color: color(_dark);
+    cursor: default;
+  }
+
+  &__group {
+    display: flex;
+    fill: color(_dark);
+    min-width: 100%;
+    flex-direction: column;
+  }
+
+  &__wrap {
+    display: inherit;
+    gap: 10px;
+    min-width: 100%;
+    flex-direction: column;
+  }
+
+  &__label,
+  .item-submit {
+    display: inherit;
+    flex-direction: column;
+  }
+
+  &__label,
+  &__thumb {
+    position: relative;
+  }
+
+  &__text {
+    display: block;
+    margin: 0 0 4px 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  }
+
+  &__input,
+  &__textarea {
+    display: block;
+    width: 100%;
+    height: 38px;
+    padding: 0 0 0 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-size: 16px;
+    @include transition(border-color, 250ms, $cubic);
+  }
+
+  &__input:hover,
+  &__input:focus,
+  &__input:active {
+    border-color: color(_c-blue);
+    outline: 1px solid color(_c-blue);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    @include transition(fill, 250ms, $cubic);
+  }
+
+  &__input:hover + &__icon,
+  &__icon:hover,
+  &__input:focus + &__icon,
+  &__icon:focus,
+  &__input:active + &__icon,
+  &__icon:active {
+    fill: color(_c-blue);
+    outline: none;
+  }
+
+  &__textarea {
+    height: 118px;
+    padding: 12px 16px;
+    resize: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: color(_c-blue);
+      outline: 1px solid color(_c-blue);
+    }
+
+    &::placeholder {
+      @include font-fw-fs-lh-ls(400, 12px, 1.67, 0.01em);
+      color: rgba(117, 117, 117, 0.5);
+      @include transition(color opacity, 250ms, $cubic);
+    }
+
+    &:hover::placeholder,
+    &:focus::placeholder {
+      color: color(_c-blue);
+      opacity: 0.5;
+    }
+  }
+
+  &__submit {
+    @extend .subscription__button;
+    margin: 0 auto;
+
+    &:hover,
+    &:focus {
+      background-color: color(_c-blue);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
