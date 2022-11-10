@@ -35,7 +35,7 @@
 
     &--current {
       position: relative;
-      fill: color(_blue);
+      color: color(_blue);
 
       &::before {
         display: block;

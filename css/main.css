@@ -358,7 +358,7 @@ html::-webkit-scrollbar-thumb {
 }
 .nav__link--current {
   position: relative;
-  fill: #2196f3;
+  color: #2196f3;
 }
 .nav__link--current::before {
   display: block;
