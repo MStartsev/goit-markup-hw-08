@@ -9,6 +9,9 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 
 .list-flex {

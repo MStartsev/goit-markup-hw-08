@@ -19,47 +19,64 @@
 
   <header class="header">
     <div class="container">
-      <div class="container-flex">
+      <div class="header__flex">
+        <a href="./" class="link logo header__logo" lang="en">Web<span class="header__logo--contrast">Studio</span></a>
 
-        <nav class="nav container-flex">
-          <a href="./" class="link logo nav__logo" lang="en">Web<span class="nav__logo--contrast">Studio</span></a>
-          <ul class="list nav__list container-flex">
+        <!-- <button class="menu-open pointer" type="button" data-menu-open>
+          <svg width="40" height="40">
+            <use href="./images/sprites/sprite.svg#i-menu"></use>
+          </svg>
+        </button> -->
+
+        <div class="menu">
+
+          <!-- <button class="menu-close pointer" type="button" data-menu-close>
+            <svg width="40" height="40">
+              <use href="./images/sprites/sprite.svg#i-x"></use>
+            </svg>
+          </button> -->
+
+          <nav class="nav container-flex">
+
+            <ul class="list nav__list container-flex">
+              <li class="item container-flex">
+                <a class="link nav__link nav__link--current" href="./">Студія</a>
+              </li>
+              <li class="item container-flex">
+                <a class="link nav__link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="item container-flex">
+                <a class="link nav__link" href="#contacts">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="list address address__menu container-flex">
             <li class="item container-flex">
-              <a class="link nav__link nav__link--current" href="./">Студія</a>
+              <a class="link address__link menu__email header__link" href="mailto:info@devstudio.com">
+                <svg class="icon__mailto" width="16" height="12">
+                  <use href="./images/sprites/sprite.svg#i-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
             <li class="item container-flex">
-              <a class="link nav__link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="item container-flex">
-              <a class="link nav__link" href="#contacts">Контакти</a>
+              <a class="link address__link menu__tel header__link" href="tel:+380961111111">
+                <svg class="icon__tel" width="10" height="16">
+                  <use href="./images/sprites/sprite.svg#i-vector"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
 
-        <ul class="list address container-flex">
-          <li class="item container-flex">
-            <a class="link address__link header__link" href="mailto:info@devstudio.com">
-              <svg class="icon__mailto" width="16" height="12">
-                <use href="./images/sprites/sprite.svg#i-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="item container-flex">
-            <a class="link address__link header__link" href="tel:+380961111111">
-              <svg class="icon__tel" width="10" height="16">
-                <use href="./images/sprites/sprite.svg#i-vector"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+        </div>
 
       </div>
     </div>
   </header>
 
-  <main class="content">
+  <!-- <main class="content">
 
     <section class="section hero">
       <div class="container">
@@ -360,10 +377,10 @@
       </div>
     </section>
 
-  </main>
+  </main> -->
 
   <!-- footer -->
-  <footer class="footer">
+  <!-- <footer class="footer">
     <div class="container">
       <div class="footer__flex">
 
@@ -434,9 +451,9 @@
 
       </div>
     </div>
-  </footer>
+  </footer> -->
 
-  <div class="backdrop is-hidden" data-modal>
+  <!-- <div class="backdrop is-hidden" data-modal>
     <div class="modal">
 
       <button class="modal__close pointer" type="button" data-modal-close>
@@ -510,7 +527,7 @@
 
       </div>
     </div>
-  </div>
+  </div> -->
 
 </body>
 

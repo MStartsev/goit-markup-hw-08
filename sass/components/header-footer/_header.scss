@@ -1,5 +1,19 @@
 .header {
   border-bottom: border(_grey-line);
+  &__flex {
+    display: flex;
+    align-items: stretch;
+    gap: 93px;
+  }
+
+  &__logo {
+    padding-top: 25px;
+    padding-bottom: 24px;
+
+    &--contrast {
+      color: color(_black);
+    }
+  }
 
   &__link {
     display: inherit;

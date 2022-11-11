@@ -7,4 +7,11 @@
   &__tel {
     margin-right: 10px;
   }
+
+  @media screen and (max-width: 480px) {
+    &__mailto,
+    &__tel {
+      display: none;
+    }
+  }
 }

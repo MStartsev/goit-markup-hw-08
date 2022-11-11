@@ -1,6 +1,12 @@
 .address {
   gap: 50px;
 
+  &__menu {
+    @media screen and (max-width: 480px) {
+      flex-direction: column-reverse;
+    }
+  }
+
   &__link {
     font-style: normal;
     color: color(_grey);
