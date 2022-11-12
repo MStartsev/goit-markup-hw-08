@@ -203,6 +203,7 @@ body,
 .img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 html::-webkit-scrollbar-track {
@@ -256,6 +257,23 @@ html::-webkit-scrollbar-thumb {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+.flex-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .flex-end {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
   }
 }
 
@@ -408,51 +426,13 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-@media screen and (max-width: 480px) {
-  .menu {
-    padding: 48px 40px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: #ffffff;
-  }
-  .menu__email {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 0.02em;
-  }
-  .menu__tel {
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 40px;
-    letter-spacing: 0.02em;
-  }
+.address {
+  gap: 32px;
 }
 @media screen and (min-width: 481px) {
-  .menu {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .address {
+    gap: 50px;
   }
-}
-
-.address {
-  gap: 50px;
 }
 @media screen and (max-width: 480px) {
   .address__menu {
@@ -476,6 +456,56 @@ html::-webkit-scrollbar-thumb {
 }
 .address__mailto, .address__tel {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .menu {
+    padding: 48px 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #ffffff;
+  }
+  .menu__wrap {
+    gap: 64px;
+  }
+  .menu__email {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+  .menu__tel {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+}
+@media screen and (min-width: 481px) {
+  .menu {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .menu__social-list {
+    display: none;
+  }
 }
 
 .footer {

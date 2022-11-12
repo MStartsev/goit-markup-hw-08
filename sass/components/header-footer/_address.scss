@@ -1,5 +1,9 @@
 .address {
-  gap: 50px;
+  gap: 32px;
+
+  @media screen and (min-width: 481px) {
+    gap: 50px;
+  }
 
   &__menu {
     @media screen and (max-width: 480px) {
