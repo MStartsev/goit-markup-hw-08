@@ -24,6 +24,27 @@
       @include font-fw-fs-lh-ls(500, 34px, 1.18, 0.02em);
       color: color(_blue);
     }
+
+    &__social-list {
+      display: inherit;
+      flex-direction: row;
+    }
+    /***************************************************/
+    &__social-item {
+      display: block;
+      height: 22px;
+
+      &:not(:first-child) {
+        padding-left: 10px;
+        border-left: 1px solid color(_dark);
+      }
+      &:not(:last-child) {
+        padding-right: 10px;
+      }
+    }
+    &__social-link {
+      color: color(_blue);
+    }
   }
 
   @media screen and (min-width: 481px) {

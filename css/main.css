@@ -479,6 +479,7 @@ html::-webkit-scrollbar-thumb {
     left: 0;
     height: 100%;
     background-color: #ffffff;
+    /***************************************************/
   }
   .menu__wrap {
     gap: 64px;
@@ -494,6 +495,27 @@ html::-webkit-scrollbar-thumb {
     font-size: 34px;
     line-height: 1.18;
     letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+  .menu__social-list {
+    display: inherit;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .menu__social-item {
+    display: block;
+    height: 22px;
+  }
+  .menu__social-item:not(:first-child) {
+    padding-left: 10px;
+    border-left: 1px solid #212121;
+  }
+  .menu__social-item:not(:last-child) {
+    padding-right: 10px;
+  }
+  .menu__social-link {
     color: #2196f3;
   }
 }
