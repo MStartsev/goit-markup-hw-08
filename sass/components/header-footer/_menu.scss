@@ -1,8 +1,10 @@
 .menu {
   display: flex;
   width: 100%;
+  opacity: 1;
+  @include transition(opacity, 350ms, $cubic);
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     padding: 48px 40px;
     flex-direction: column;
     justify-content: space-between;
@@ -11,47 +13,82 @@
     left: 0;
     height: 100%;
     background-color: color(_white);
+  }
 
-    &__wrap {
-      gap: 64px;
+  &__visually-hidden {
+    @media screen and (max-width: 767px) {
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      margin: -1px;
     }
+  }
 
-    &__email {
+  &__wrap {
+    @media screen and (max-width: 767px) {
+      gap: 64px;
+      min-width: 400px;
+    }
+  }
+
+  &__email {
+    @media screen and (max-width: 767px) {
       @include font-fw-fs-lh-ls(500, 24px, 1.17, 0.02em);
     }
+  }
 
-    &__tel {
+  &__tel {
+    @media screen and (max-width: 767px) {
       @include font-fw-fs-lh-ls(500, 34px, 1.18, 0.02em);
-      color: color(_blue);
-    }
-
-    &__social-list {
-      display: inherit;
-      flex-direction: row;
-    }
-    /***************************************************/
-    &__social-item {
-      display: block;
-      height: 22px;
-
-      &:not(:first-child) {
-        padding-left: 10px;
-        border-left: 1px solid color(_dark);
-      }
-      &:not(:last-child) {
-        padding-right: 10px;
-      }
-    }
-    &__social-link {
       color: color(_blue);
     }
   }
 
-  @media screen and (min-width: 481px) {
+  &__social-list {
+    display: inherit;
+    flex-direction: row;
+  }
+
+  &__social-item {
+    display: block;
+    height: 22px;
+
+    &:not(:first-child) {
+      padding-left: 10px;
+      border-left: 1px solid color(_dark);
+    }
+    &:not(:last-child) {
+      padding-right: 10px;
+    }
+  }
+  &__social-link {
+    @include font-fw-fs-lh-ls(500, 18px, 1.22, 0.02em);
+    color: color(_blue);
+  }
+
+  @media screen and (min-width: 768px) {
     justify-content: space-between;
 
     &__social-list {
       display: none;
     }
   }
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.isok {
+  width: 10px;
+  height: 10px;
+  background-color: aqua;
 }

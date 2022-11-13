@@ -34,4 +34,6 @@ window.addEventListener('load', () => {
       document.querySelector('.modal').style.marginLeft = widthScroll / 2 + 'px';
     }
   }
+
+  //Mobile menu
 });

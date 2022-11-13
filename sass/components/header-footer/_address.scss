@@ -1,14 +1,16 @@
 .address {
+  flex-direction: column-reverse;
   gap: 32px;
 
-  @media screen and (min-width: 481px) {
-    gap: 50px;
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
   }
 
-  &__menu {
-    @media screen and (max-width: 480px) {
-      flex-direction: column-reverse;
-    }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    gap: 50px;
   }
 
   &__link {

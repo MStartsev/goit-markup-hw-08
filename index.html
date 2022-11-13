@@ -12,7 +12,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="./css/main.min.css">
-  <script src="./js/modal.js"></script>
+  <!-- <script src="./js/modal.js"></script> -->
 </head>
 
 <body class="not-padding" data-o-hidden>
@@ -22,19 +22,19 @@
       <div class="header__flex">
         <a href="./" class="link logo header__logo" lang="en">Web<span class="header__logo--contrast">Studio</span></a>
 
-        <!-- <button class="menu-open pointer" type="button" data-menu-open>
+        <button class="btn__menu-open pointer" type="button" data-menu-open>
           <svg width="40" height="40">
             <use href="./images/sprites/sprite.svg#i-menu"></use>
           </svg>
-        </button> -->
+        </button>
 
-        <div class="menu">
+        <div class="menu menu__visually-hidden" data-menu>
 
-          <!-- <button class="menu-close pointer" type="button" data-menu-close>
-            <svg width="40" height="40">
+          <button class="btn__menu-close pointer" type="button" data-menu-close>
+            <svg width="20" height="20">
               <use href="./images/sprites/sprite.svg#i-x"></use>
             </svg>
-          </button> -->
+          </button>
 
           <nav class="nav container-flex">
 
@@ -539,6 +539,28 @@
       </div>
     </div>
   </div> -->
+
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script>
+
+    const mobmenu = {
+      openMenuBtn: document.querySelector('[data-menu-open]'),
+      closeMenuBtn: document.querySelector('[data-menu-close]'),
+      menu: document.querySelector('[data-menu]'),
+    };
+
+    mobmenu.openMenuBtn.addEventListener('click', toggleMenu);
+    mobmenu.closeMenuBtn.addEventListener('click', toggleMenu);
+
+    function toggleMenu() {
+      mobmenu.menu.classList.toggle('menu__visually-hidden');
+      console.log('click')
+    }
+
+  </script>
 
 </body>
 
