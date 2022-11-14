@@ -44,3 +44,33 @@ transition: height 0.2s linear 0s, width 0.3s linear 0s, transform 0.3s linear 0
   -ms-border-radius: $n;
   -o-border-radius: $n;
 }
+
+// url(../images/main/bghero.jpg)
+
+@mixin bg-image-assembly($image, $media-x, $path, $gradient) {
+  background-image: $gradient, url($path + $image + $media-x + '.jpg');
+}
+
+@mixin bg-image(
+  $image,
+  $path: '../images/main/',
+  $gradient: (linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)))
+) {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include bg-image-assembly($image, '@1x', $path, $gradient);
+
+  @for $i from 2 to 3 {
+    @media (min-device-pixel-ratio: $i),
+      (-webkit-min-device-pixel-ratio: $i),
+      (min-resolution: ((96*$i)dpi)),
+      (min-resolution: (($i)dppx)) {
+      @include bg-image-assembly($image, '@' + $i + 'x', $path, $gradient);
+    }
+  }
+}
+
+@mixin responsive($property, $n, $width) {
+  $property: calc($n + ($n * ((100vw - $width) / $width)));
+}

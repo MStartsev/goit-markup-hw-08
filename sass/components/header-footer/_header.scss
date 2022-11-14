@@ -1,5 +1,16 @@
 .header {
+  margin-inline: auto;
   border-bottom: border(_grey-line);
+  max-width: var(--mobile);
+
+  @media screen and (min-width: 768px) {
+    max-width: var(--tablet);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+  }
+
   &__flex {
     display: flex;
     align-items: stretch;
