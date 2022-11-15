@@ -12,7 +12,7 @@
 
   &__s-title {
     display: block;
-    padding-block: 27px;
+    padding-block: calc(27px * var(--coef));
     margin: 0;
     width: 100%;
     position: absolute;
@@ -22,5 +22,9 @@
     text-transform: uppercase;
     color: color(_white);
     background: rgba(47, 48, 58, 0.8);
+  }
+
+  &__img {
+    width: calc(370px * var(--coef));
   }
 }

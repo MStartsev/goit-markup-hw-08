@@ -1,7 +1,7 @@
 .hero {
   margin: 0 auto;
   max-width: var(--mobile);
-  @include responsive(padding-block, 118px, 480px);
+  padding-block: calc(118px * var(--coef));
   background: color(_f-bg);
   @include bg-image('bghero480');
 
@@ -18,8 +18,7 @@
 
   &__title {
     display: block;
-    @include responsive(width, 360px, 480px);
-    max-width: 360px;
+    max-width: calc(360px * var(--coef));
     margin-inline: auto;
     text-align: center;
     text-transform: uppercase;

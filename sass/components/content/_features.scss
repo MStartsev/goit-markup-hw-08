@@ -3,12 +3,16 @@
     margin: 0;
     @include font-fw-fs-lh-ls(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
 
   &__box {
+    height: calc(120px * var(--coef));
     display: flex;
-    width: 270px;
-    height: 120px;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
@@ -23,7 +27,15 @@
   }
 
   &__item {
-    flex-basis: 270px;
+    flex-basis: 100%;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(354px * var(--coef));
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(270px * var(--coef));
+    }
   }
 
   &__icon {

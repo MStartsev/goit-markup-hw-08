@@ -1,4 +1,11 @@
 window.addEventListener('load', () => {
+  window.addEventListener('resize', () => {
+    let windowInnerWidth = document.documentElement.clientWidth;
+    document.documentElement.style.setProperty('--window-inner-width', windowInnerWidth);
+
+    console.log('--coef:', getComputedStyle(document.documentElement).getPropertyValue('--coef'));
+  });
+
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),

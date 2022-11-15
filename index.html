@@ -151,27 +151,33 @@
       </div>
     </section>
 
-    <!-- <section class="section about">
+    <section class="section about">
       <div class="container">
 
         <h2 class="section__title">Чим ми займаємося</h2>
         <ul class="list list-flex">
           <li class="item about__item">
-            <img src="./images/main/box01.jpg" class="img" alt="Розробка бізнес логіки" width="370">
+            <img class="img about__img"
+              srcset="./images/main/box01@1x.jpg 1x, ./images/main/box01@2x.jpg 2x, ./images/main/box01@3x.jpg 3x,"
+              src="./images/main/box01@1x.jpg" alt="Розробка бізнес логіки" width="370">
             <h3 class="about__s-title">Десктопні додатки</h3>
           </li>
           <li class="item about__item">
-            <img src="./images/main/box02.jpg" class="img" alt="Розробка мобільних інтерфейсів" width="370">
+            <img class="img about__img"
+              srcset="./images/main/box02@1x.jpg 1x, ./images/main/box02@2x.jpg 2x, ./images/main/box02@3x.jpg 3x,"
+              src="./images/main/box02@1x.jpg" alt="Розробка мобільних інтерфейсів" width="370">
             <h3 class="about__s-title">Мобільні додатки</h3>
           </li>
           <li class="item about__item">
-            <img src="./images/main/box03.jpg" class="img" alt="Семантичні кольори" width="370">
+            <img class="img about__img"
+              srcset="./images/main/box03@1x.jpg 1x, ./images/main/box03@2x.jpg 2x, ./images/main/box03@3x.jpg 3x,"
+              src="./images/main/box03@1x.jpg" alt="Семантичні кольори" width="370">
             <h3 class="about__s-title">Дизайнерські рішення</h3>
           </li>
         </ul>
 
       </div>
-    </section> -->
+    </section>
 
     <section class="section team">
       <div class="container">
@@ -179,8 +185,20 @@
         <h2 class="section__title">Наша команда</h2>
         <ul class="list list-flex">
           <li class="item team__item">
-            <img src="./images/main/igor.jpg" class="img"
-              alt="Фотопортрет усміхненого Ігоря в окулярах та червоній сорочці" width="270" height="260">
+            <picture class="img">
+              <source
+                srcset="./images/main/igor270@1x.jpg 1x, ./images/main/igor270@2x.jpg 2x, ./images/main/igor270@3x.jpg 3x"
+                media="(min-width: 1200px)" />
+              <source
+                srcset="./images/main/igor354@1x.jpg 1x, ./images/main/igor354@2x.jpg 2x, ./images/main/igor354@3x.jpg 3x"
+                media="(min-width: 768px)" />
+              <source
+                srcset="./images/main/igor450@1x.jpg 1x, ./images/main/igor450@2x.jpg 2x, ./images/main/igor450@3x.jpg 3x"
+                media="(max-width: 767px)" />
+              <img class="img team__img" src="./images/main/igor270@1x.jpg"
+                alt="Фотопортрет усміхненого Ігоря в окулярах та червоній сорочці" width="450" />
+            </picture>
+
             <div class="wrapper">
               <h3 class="title team__s-title">Ігор Дем'яненко</h3>
               <p class="text team__text" lang="en">Product Designer</p>
@@ -217,8 +235,21 @@
             </div>
           </li>
           <li class="item team__item">
-            <img src="./images/main/olha.jpg" class="img"
-              alt="Фотопортрет усміхненої Ольги в окулярах і чорному піджаку" width="270" height="260">
+
+            <picture class="img team__img">
+              <source
+                srcset="./images/main/olha270@1x.jpg 1x, ./images/main/olha270@2x.jpg 2x, ./images/main/olha270@3x.jpg 3x"
+                media="(min-width: 1200px)" />
+              <source
+                srcset="./images/main/olha354@1x.jpg 1x, ./images/main/olha354@2x.jpg 2x, ./images/main/olha354@3x.jpg 3x"
+                media="(min-width: 768px)" />
+              <source
+                srcset="./images/main/olha450@1x.jpg 1x, ./images/main/olha450@2x.jpg 2x, ./images/main/olha450@3x.jpg 3x"
+                media="(max-width: 767px)" />
+              <img class="img team__img" src="./images/main/olha270@1x.jpg"
+                alt="Фотопортрет усміхненої Ольги в окулярах і чорному піджаку" width="450" />
+            </picture>
+
             <div class="wrapper">
               <h3 class=" title team__s-title">Ольга Рєпіна</h3>
               <p class="text team__text" lang="en">Frontend Developer</p>
@@ -255,8 +286,21 @@
             </div>
           </li>
           <li class="item team__item">
-            <img src="./images/main/mykola.jpg" class="img" alt="Фотопортрет усміхненого Миколи у білій сорочці"
-              width="270" height="260">
+
+            <picture class="img team__img">
+              <source
+                srcset="./images/main/mykola270@1x.jpg 1x, ./images/main/mykola270@2x.jpg 2x, ./images/main/mykola270@3x.jpg 3x"
+                media="(min-width: 1200px)" />
+              <source
+                srcset="./images/main/mykola354@1x.jpg 1x, ./images/main/mykola354@2x.jpg 2x, ./images/main/mykola354@3x.jpg 3x"
+                media="(min-width: 768px)" />
+              <source
+                srcset="./images/main/mykola450@1x.jpg 1x, ./images/main/mykola450@2x.jpg 2x, ./images/main/mykola450@3x.jpg 3x"
+                media="(max-width: 767px)" />
+              <img class="img team__img" src="./images/main/mykola270@1x.jpg"
+                alt="Фотопортрет усміхненого Миколи у білій сорочці" width="450" />
+            </picture>
+
             <div class="wrapper">
               <h3 class=" title team__s-title">Микола Тарасов</h3>
               <p class="text team__text" lang="en">Marketing</p>
@@ -293,8 +337,21 @@
             </div>
           </li>
           <li class="item team__item">
-            <img src="./images/main/mykhailo.jpg" class="img"
-              alt="Фотопортрет усміхненого Михайла в окулярах і чорній футболці" width="270" height="260">
+
+            <picture class="img team__img">
+              <source
+                srcset="./images/main/mykhailo270@1x.jpg 1x, ./images/main/mykhailo270@2x.jpg 2x, ./images/main/mykhailo270@3x.jpg 3x"
+                media="(min-width: 1200px)" />
+              <source
+                srcset="./images/main/mykhailo354@1x.jpg 1x, ./images/main/mykhailo354@2x.jpg 2x, ./images/main/mykhailo354@3x.jpg 3x"
+                media="(min-width: 768px)" />
+              <source
+                srcset="./images/main/mykhailo450@1x.jpg 1x, ./images/main/mykhailo450@2x.jpg 2x, ./images/main/mykhailo450@3x.jpg 3x"
+                media="(max-width: 767px)" />
+              <img class="img team__img" src="./images/main/mykhailo270@1x.jpg"
+                alt="Фотопортрет усміхненого Михайла в окулярах і чорній футболці" width="450" />
+            </picture>
+
             <div class="wrapper">
               <h3 class=" title team__s-title">Михайло Єрмаков</h3>
               <p class="text team__text" lang="en">UI Designer</p>
