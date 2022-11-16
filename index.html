@@ -12,7 +12,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="./css/main.min.css">
-  <script src="./js/modal.js"></script>
+
 </head>
 
 <body class="not-padding" data-o-hidden>
@@ -46,7 +46,7 @@
                 <a class="link nav__link" href="./portfolio.html">Портфоліо</a>
               </li>
               <li class="item container-flex">
-                <a class="link nav__link" href="#contacts">Контакти</a>
+                <a class="link nav__link" href="#contacts" data-menu-contacts>Контакти</a>
               </li>
             </ul>
           </nav>
@@ -616,21 +616,9 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
     crossorigin="anonymous"></script>
+
+  <script src="./js/script.js"></script>
   <script>
-
-    const mobmenu = {
-      openMenuBtn: document.querySelector('[data-menu-open]'),
-      closeMenuBtn: document.querySelector('[data-menu-close]'),
-      menu: document.querySelector('[data-menu]'),
-    };
-
-    mobmenu.openMenuBtn.addEventListener('click', toggleMenu);
-    mobmenu.closeMenuBtn.addEventListener('click', toggleMenu);
-
-    function toggleMenu() {
-      mobmenu.menu.classList.toggle('menu__visually-hidden');
-      console.log('click')
-    }
 
   </script>
 
