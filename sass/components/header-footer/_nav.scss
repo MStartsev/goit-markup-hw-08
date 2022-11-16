@@ -2,21 +2,18 @@
   &__list {
     gap: 50px;
     @media screen and (max-width: 767px) {
-      gap: 32px;
+      gap: res(32px);
     }
   }
 
   &__link {
     display: inherit;
     align-items: center;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.175;
-    letter-spacing: 0.02em;
+    @include font-fw-fs-lh-ls(500, 40px, 1.175, 0.02em);
 
     @media screen and (min-width: 768px) {
-      font-size: 14px;
-      line-height: 1.14;
+      font-size: res(14px);
+      line-height: res(1.14);
     }
 
     transition: color 250ms $cubic, fill 250ms $cubic;

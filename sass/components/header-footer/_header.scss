@@ -25,13 +25,13 @@
     }
 
     @media screen and (min-width: 1200px) {
-      gap: 93px;
+      gap: res(93px);
     }
   }
 
   &__logo {
-    padding-top: 25px;
-    padding-bottom: 24px;
+    padding-top: res(25px);
+    padding-bottom: res(24px);
 
     &--contrast {
       color: color(_black);
@@ -41,10 +41,7 @@
   &__link {
     display: inherit;
     align-items: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include font-fw-fs-lh-ls(500, 14px, 1.14, 0.02em);
     transition: color 250ms $cubic, fill 250ms $cubic;
     -webkit-transition: color 250ms $cubic, fill 250ms $cubic;
     -moz-transition: color 250ms $cubic, fill 250ms $cubic;

@@ -1,14 +1,25 @@
 .clients {
   &__link {
     display: flex;
-    width: 170px;
-    height: 92px;
+    width: res(210px);
+    height: res(92px);
+
     align-items: center;
     justify-content: center;
     fill: color(_c-grey);
     border: 1px solid color(_c-grey);
     border-radius: 4px;
     @include transition(background-color fill, 250ms, $cubic);
+
+    @media screen and (min-width: 768px) {
+      width: res(226px);
+      height: res(92px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: res(170px);
+      height: res(92px);
+    }
 
     &:hover,
     &:focus {
@@ -18,8 +29,8 @@
 
     &__icon {
       display: block;
-      width: 106px;
-      height: 60px;
+      width: res(106px);
+      height: res(60px);
     }
   }
 }

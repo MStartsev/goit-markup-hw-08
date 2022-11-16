@@ -6,10 +6,11 @@
   justify-content: center;
 
   &__link {
-    display: block;
-    width: 44px;
-    height: 44px;
-    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: res(44px);
+    height: res(44px);
     fill: color(_c-grey);
     @include border-radius(50%);
     @include transition(background-color fill, 250ms, $cubic);

@@ -1,18 +1,41 @@
 .checkbox {
   display: inherit;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 20px 0 30px 0;
-  font-size: 14px;
-  line-height: 1.71;
+  margin: res(20px) 0 res(30px) 0;
+  font-size: res(12px);
+  line-height: res(1.71);
   letter-spacing: 0.03em;
   color: color(_grey);
 
+  @media screen and(min-width: 1200px) {
+    margin: res(20px) 0 res(30px) 0;
+    font-size: res(14px);
+  }
+
+  &__text {
+    display: block;
+    padding-left: 24px;
+
+    @media screen and(min-width: 1200px) {
+      padding-left: 20px;
+    }
+  }
+
   &__link {
-    margin-left: 4px;
+    margin-left: res(4px);
     text-decoration-line: underline;
     color: color(_blue);
+  }
+
+  &__icon {
+    left: 0;
+
+    @media screen and(min-width: 1200px) {
+      left: 8px;
+    }
   }
 
   &__icon,

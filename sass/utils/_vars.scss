@@ -19,28 +19,14 @@
   --mobile: 480px;
   --tablet: 768px;
   --desktop: 1200px;
-  --scrollbar-width: 15px;
-  --window-inner-width: 480;
-  --coef480: 1;
-  --coef768: 1;
-  --coef1200: 1;
+  --scrollbar-width: 15;
+  --window-client-width: 768;
   --coef: 1;
+}
 
-  // @media screen and (max-width: 480px) {
-  //   --coef: calc(var(--window-inner-width) / 480);
-  // }
-
-  @media screen and (min-width: 768px) and (max-width: 783px) {
-    --coef: calc(var(--window-inner-width) / 768);
-  }
-
-  @media screen and (min-width: 1200px) and (max-width: 1600px) {
-    --coef: calc(var(--window-inner-width) / 1200);
-  }
-
-  @media screen and (min-width: 1600px) {
-    --coef: calc(1599 / 1200);
-  }
+//coefficient responsive
+@function res($n) {
+  @return (calc($n * var(--coef)));
 }
 
 $content-width: 1200px;

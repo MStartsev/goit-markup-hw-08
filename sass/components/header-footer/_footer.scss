@@ -1,11 +1,28 @@
 .footer {
   padding-block: 60px;
   background: color(_f-bg);
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 
   &__flex {
     display: flex;
-    gap: 70px;
-    align-items: baseline;
+    flex-direction: column;
+    gap: 60px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 60px res(165px);
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1200px) {
+      gap: res(70px);
+      align-items: baseline;
+    }
   }
 
   &__logo {
@@ -21,13 +38,17 @@
     display: block;
 
     &:not(:last-child) {
-      margin-bottom: 9px;
+      margin-bottom: res(8px);
+
+      @media screen and (min-width: 1200px) {
+        margin-bottom: res(9px);
+      }
     }
   }
 
   &__link {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: res(14px);
+    line-height: res(1.71);
     letter-spacing: 0.03em;
     transition: color 250ms $cubic;
     -webkit-transition: color 250ms $cubic;

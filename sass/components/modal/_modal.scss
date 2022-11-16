@@ -1,11 +1,11 @@
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
-  padding: 40px;
+  width: calc(405px * (var(--window-client-width) / 425));
+  padding: res(40px);
   overflow: auto;
-  top: calc(50% - (581px) / 2);
-  left: calc(50% - (528px) / 2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   background-color: color(_white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -15,17 +15,25 @@
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
 
+  @media screen and(min-width: 425px) {
+    width: res(450px);
+  }
+
+  @media screen and(min-width: 1200px) {
+    width: res(528px);
+  }
+
   &__wrap {
     position: relative;
   }
 
   &__close {
-    width: 30px;
-    height: 30px;
+    width: res(30px);
+    height: res(30px);
     padding: 0;
     position: absolute;
-    top: 6px;
-    right: 6px;
+    top: res(6px);
+    right: res(6px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,5 +48,10 @@
       fill: color(_blue);
       @include transition(fill, 250ms, $cubic);
     }
+  }
+
+  &__icon {
+    width: res(11px);
+    height: res(11px);
   }
 }

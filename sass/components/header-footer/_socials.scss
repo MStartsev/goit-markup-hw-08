@@ -9,17 +9,18 @@
 
   &__list {
     display: flex;
-    gap: 10px;
+    gap: res(10px);
     padding: 0;
     margin: 0;
     justify-content: center;
   }
 
   &__link {
-    display: block;
-    width: 44px;
-    height: 44px;
-    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: res(44px);
+    height: res(44px);
     fill: color(_white);
     background-color: color(_socials-bg);
     @include border-radius(50%);

@@ -186,6 +186,11 @@
         <ul class="list list-flex">
           <li class="item team__item">
             <picture class="img">
+              <source srcset=" ./images/main/igor270@2x.jpg 2x, ./images/main/igor270@3x.jpg 3x"
+                media="(min-width: 1600px)" />
+              <source
+                srcset="./images/main/igor270@1x.jpg 1x, ./images/main/igor270@2x.jpg 2x, ./images/main/igor270@3x.jpg 3x"
+                media="(min-width: 1200px)" />
               <source
                 srcset="./images/main/igor270@1x.jpg 1x, ./images/main/igor270@2x.jpg 2x, ./images/main/igor270@3x.jpg 3x"
                 media="(min-width: 1200px)" />
@@ -237,6 +242,8 @@
           <li class="item team__item">
 
             <picture class="img team__img">
+              <source srcset=" ./images/main/olha270@2x.jpg 2x, ./images/main/olha270@3x.jpg 3x"
+                media="(min-width: 1600px)" />
               <source
                 srcset="./images/main/olha270@1x.jpg 1x, ./images/main/olha270@2x.jpg 2x, ./images/main/olha270@3x.jpg 3x"
                 media="(min-width: 1200px)" />
@@ -288,6 +295,8 @@
           <li class="item team__item">
 
             <picture class="img team__img">
+              <source srcset=" ./images/main/mykola270@2x.jpg 2x, ./images/main/mykola270@3x.jpg 3x"
+                media="(min-width: 1600px)" />
               <source
                 srcset="./images/main/mykola270@1x.jpg 1x, ./images/main/mykola270@2x.jpg 2x, ./images/main/mykola270@3x.jpg 3x"
                 media="(min-width: 1200px)" />
@@ -339,6 +348,8 @@
           <li class="item team__item">
 
             <picture class="img team__img">
+              <source srcset=" ./images/main/mykhailo270@2x.jpg 2x, ./images/main/mykhailo270@3x.jpg 3x"
+                media="(min-width: 1600px)" />
               <source
                 srcset="./images/main/mykhailo270@1x.jpg 1x, ./images/main/mykhailo270@2x.jpg 2x, ./images/main/mykhailo270@3x.jpg 3x"
                 media="(min-width: 1200px)" />
@@ -392,7 +403,7 @@
       </div>
     </section>
 
-    <!-- 
+
     <section class="section clients">
       <div class="container">
 
@@ -443,16 +454,17 @@
         </ul>
 
       </div>
-    </section> -->
+    </section>
 
   </main>
 
   <!-- footer -->
-  <!-- <footer class="footer">
+
+  <footer class="footer">
     <div class="container">
       <div class="footer__flex">
 
-        <div>
+        <div class="footer__flex-item">
           <a href="./" class="link logo footer__logo" lang="en">Web<span
               class="footer__logo--contrast">Studio</span></a>
           <address id="contacts" class="address">
@@ -519,13 +531,13 @@
 
       </div>
     </div>
-  </footer> -->
+  </footer>
 
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
 
       <button class="modal__close pointer" type="button" data-modal-close>
-        <svg width="11" height="11">
+        <svg class="modal__icon" width="11" height="11">
           <use href="./images/sprites/sprite.svg#i-x"></use>
         </svg>
       </button>
@@ -583,9 +595,12 @@
               <svg class="form__icon checkbox__icon" width="16" height="16">
                 <use href="./images/sprites/sprite.svg#i-checkbox"></use>
               </svg>
-              Погоджуюся з розсилкою та приймаю
-              <a class="checkbox__link" href="#" target="_blank" rel="noopener noreferrer">Умови
-                договору</a>
+              <span class="checkbox__text">
+                Погоджуюся з розсилкою та приймаю
+                <a class="checkbox__link" href="#" target="_blank" rel="noopener noreferrer">Умови
+                  договору</a>
+              </span>
+
             </label>
 
             <button class="form__submit pointer" type="submit">Відправити</button>

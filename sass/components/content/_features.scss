@@ -11,7 +11,7 @@
   }
 
   &__box {
-    height: calc(120px * var(--coef));
+    height: res(120px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,8 +40,8 @@
 
   &__icon {
     display: block;
-    width: 70px;
-    height: 70px;
+    width: res(70px);
+    height: res(70px);
     fill: color(_dark);
     --c-a: var(--color-blue);
   }

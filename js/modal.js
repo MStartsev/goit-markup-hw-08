@@ -1,10 +1,44 @@
 window.addEventListener('load', () => {
-  window.addEventListener('resize', () => {
-    let windowInnerWidth = document.documentElement.clientWidth;
-    document.documentElement.style.setProperty('--window-inner-width', windowInnerWidth);
+  respCoef();
 
-    console.log('--coef:', getComputedStyle(document.documentElement).getPropertyValue('--coef'));
+  window.addEventListener('resize', () => {
+    respCoef();
   });
+
+  function respCoef() {
+    let windowInnerWidth = window.innerWidth;
+    let windowClientWidth = document.documentElement.clientWidth;
+    document.documentElement.style.setProperty('--window-client-width', windowClientWidth);
+
+    let coef = windowClientWidth / windowInnerWidth;
+    let scrollbar = windowInnerWidth - windowClientWidth;
+
+    if (windowInnerWidth > 1600) {
+      coef = (1600 - scrollbar) / 1200;
+      document.documentElement.style.setProperty('--coef', coef);
+    } else if (windowInnerWidth > 1200) {
+      coef = windowClientWidth / 1200;
+      document.documentElement.style.setProperty('--coef', coef);
+    } else if (windowInnerWidth >= 480 || windowInnerWidth <= 424) {
+      document.documentElement.style.setProperty('--coef', coef);
+    } else if (windowInnerWidth > 360) {
+      coef = windowClientWidth / 480;
+      document.documentElement.style.setProperty('--coef', coef);
+    }
+
+    console.log(
+      'clientWidth:',
+      getComputedStyle(document.documentElement).getPropertyValue('--window-client-width'),
+      '; innerWidth:',
+      windowInnerWidth,
+      '; --:',
+      windowInnerWidth - windowClientWidth,
+      '; Scrollbar:',
+      getComputedStyle(document.documentElement).getPropertyValue('--scrollbar-width'),
+      '; --coef:',
+      getComputedStyle(document.documentElement).getPropertyValue('--coef')
+    );
+  }
 
   const refs = {
     openModalBtn: document.querySelector('[data-modal-open]'),
@@ -17,6 +51,11 @@ window.addEventListener('load', () => {
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   let widthScroll = scrollbarWidth();
+  document.documentElement.style.setProperty('--scrollbar-width', widthScroll);
+  console.log(
+    '--scrollbar-width:',
+    getComputedStyle(document.documentElement).getPropertyValue('--scrollbar-width')
+  );
 
   function scrollbarWidth() {
     var documentWidth = parseInt(document.documentElement.clientWidth);

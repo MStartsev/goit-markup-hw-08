@@ -1,8 +1,9 @@
 .logo {
   font-family: font(_raleway);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include font-fw-fs-lh-ls(700, 24px, 1.19, 0.03em);
   color: color(_blue);
+
+  @media screen and (min-width: 1200px) {
+    font-size: res(26px);
+  }
 }

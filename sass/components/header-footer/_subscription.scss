@@ -9,13 +9,27 @@
 
   &__form {
     display: flex;
-    gap: 12px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    @media screen and (min-width: 1200px) {
+      gap: res(12px);
+    }
   }
 
   &__input {
-    width: 356px;
-    height: 48px;
-    padding-left: 16px;
+    height: res(50px);
+    padding-left: res(16px);
+
+    @media screen and (min-width: 768px) {
+      width: res(450px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: res(356px);
+    }
+
     color: color(_white);
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -33,7 +47,7 @@
     }
 
     &::placeholder {
-      line-height: 1.25;
+      line-height: res(1.25);
       letter-spacing: 0.03em;
       color: color(_address-g);
     }
@@ -46,10 +60,11 @@
 
   &__button {
     display: flex;
-    gap: 10px;
-    min-width: 200px;
-    max-width: 200px;
-    padding-block: 10px;
+    gap: res(12px);
+    min-width: res(200px);
+    max-width: res(200px);
+    padding-block: res(10px);
+    margin-inline: auto;
     @include font-fw-fs-lh-ls(700, 16px, 1.88, 0.06em);
     align-items: center;
     text-align: center;
@@ -60,6 +75,11 @@
     background: color(_blue);
     border-radius: 4px;
     @include transition(background-color box-shadow, 250ms, $cubic);
+
+    @media screen and (min-width: 1200px) {
+      gap: res(10px);
+      margin-inline: 0 auto;
+    }
 
     &:hover,
     &:focus {

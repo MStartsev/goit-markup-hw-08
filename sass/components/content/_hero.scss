@@ -1,7 +1,7 @@
 .hero {
   margin: 0 auto;
   max-width: var(--mobile);
-  padding-block: calc(118px * var(--coef));
+  padding-block: res(118px);
   background: color(_f-bg);
   @include bg-image('bghero480');
 
@@ -18,7 +18,7 @@
 
   &__title {
     display: block;
-    max-width: calc(360px * var(--coef));
+    max-width: res(360px);
     margin-inline: auto;
     text-align: center;
     text-transform: uppercase;
@@ -26,12 +26,10 @@
     @include font-fw-fs-lh-ls(900, 26px, 1.62, 0.06em);
 
     @media screen and (min-width: 1200px) {
-      min-width: 696px;
+      min-width: res(696px);
       margin: 0 auto 30px auto;
-      font-weight: 900;
-      font-size: 44px;
-      line-height: 1.36;
-      letter-spacing: 0.06em;
+      font-size: res(44px);
+      line-height: res(1.36);
     }
   }
 
@@ -39,10 +37,7 @@
     display: block;
     padding: 10px 24px 10px 24px;
     margin-inline: auto;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+    @include font-fw-fs-lh-ls(700, 16px, 1.88, 0.06em);
     color: color(_white);
     background: color(_blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -51,7 +46,7 @@
     @include transition(background-color, 250ms, $cubic);
 
     @media screen and (min-width: 1200px) {
-      padding-inline: 32px;
+      padding-inline: res(32px);
     }
 
     &:hover,
