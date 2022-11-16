@@ -1,8 +1,10 @@
 (() => {
   respCoef();
+  mobileMenu();
 
   window.addEventListener('resize', () => {
     respCoef();
+    mobileMenu();
   });
 
   function respCoef() {
@@ -72,32 +74,33 @@
   }
 
   //Mobile menu
+  function mobileMenu() {
+    const mobmenu = {
+      openMenuBtn: document.querySelector('[data-menu-open]'),
+      closeMenuBtn: document.querySelector('[data-menu-close]'),
+      contactsMenuBtn: document.querySelector('[data-menu-contacts]'),
+      menu: document.querySelector('[data-menu]'),
+      o_hidden: document.querySelector('.js-o-hidden'),
+    };
 
-  const mobmenu = {
-    openMenuBtn: document.querySelector('[data-menu-open]'),
-    closeMenuBtn: document.querySelector('[data-menu-close]'),
-    contactsMenuBtn: document.querySelector('[data-menu-contacts]'),
-    menu: document.querySelector('[data-menu]'),
-    o_hidden: document.querySelector('[data-o-hidden]'),
-  };
+    mobmenu.openMenuBtn.addEventListener('click', toggleMenu);
+    mobmenu.closeMenuBtn.addEventListener('click', toggleMenu);
+    mobmenu.contactsMenuBtn.addEventListener('click', toggleMenu);
 
-  mobmenu.openMenuBtn.addEventListener('click', toggleMenu);
-  mobmenu.closeMenuBtn.addEventListener('click', toggleMenu);
-  mobmenu.contactsMenuBtn.addEventListener('click', toggleMenu);
+    function toggleMenu() {
+      mobmenu.menu.classList.toggle('menu__visually-hidden');
+      mobmenu.o_hidden.classList.toggle('o-padding');
+      mobmenu.o_hidden.classList.toggle('not-padding');
 
-  function toggleMenu() {
-    mobmenu.menu.classList.toggle('menu__visually-hidden');
-    mobmenu.o_hidden.classList.toggle('o-padding');
-    mobmenu.o_hidden.classList.toggle('not-padding');
-
-    try {
-      let elem = document.querySelector('.o-padding').style;
-      elem.paddingRight = widthScroll + 'px';
-      document.querySelector('.modal').style.marginLeft = 0;
-    } catch (err) {
-      let elem = document.querySelector('.not-padding').style;
-      elem.paddingRight = 0;
-      document.querySelector('.modal').style.marginLeft = widthScroll / 2 + 'px';
+      try {
+        let elem = document.querySelector('.o-padding').style;
+        elem.paddingRight = widthScroll + 'px';
+        document.querySelector('.modal').style.marginLeft = 0;
+      } catch (err) {
+        let elem = document.querySelector('.not-padding').style;
+        elem.paddingRight = 0;
+        document.querySelector('.modal').style.marginLeft = widthScroll / 2 + 'px';
+      }
     }
   }
 })();
