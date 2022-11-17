@@ -1,11 +1,11 @@
 .modal {
   position: absolute;
-  width: calc(405px * (var(--window-client-width) / 425));
   padding: res(40px);
+  margin-bottom: -15vh;
   overflow: auto;
-  top: 50%;
+  top: 15vh;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, 0) scale(1);
   background-color: color(_white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -14,13 +14,13 @@
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-
-  @media screen and(min-width: 425px) {
+  @media screen and(min-width: 480px) {
     width: res(450px);
   }
 
   @media screen and(min-width: 1200px) {
     width: res(528px);
+    top: 15vh;
   }
 
   &__wrap {

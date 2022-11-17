@@ -20,8 +20,8 @@
     background-color: color(_white);
   }
 
-  @media screen and (max-width: 480px) {
-    padding: 48px res480(40px);
+  @media screen and (max-width: 437px) {
+    padding: 48px res437(40px);
   }
 
   // @media screen and (max-width: 425px) {
@@ -53,8 +53,8 @@
       min-width: res(400px);
     }
 
-    @media screen and (max-width: 480px) {
-      min-width: res480(400px);
+    @media screen and (max-width: 437px) {
+      min-width: res437(400px);
     }
   }
 
@@ -63,9 +63,9 @@
       @include font-fw-fs-lh-ls(500, 24px, 1.17, 0.02em);
     }
 
-    @media screen and (max-width: 480px) {
-      font-size: res480(24px);
-      line-height: res480(1.17);
+    @media screen and (max-width: 437px) {
+      font-size: res437(24px);
+      line-height: res437(1.17);
     }
 
     // @media screen and (max-width: 425px) {
@@ -79,9 +79,9 @@
       color: color(_blue);
     }
 
-    @media screen and (max-width: 480px) {
-      font-size: res480(34px);
-      line-height: res480(1.18);
+    @media screen and (max-width: 437px) {
+      font-size: res437(34px);
+      line-height: res437(1.18);
     }
 
     // @media screen and (max-width: 425px) {
@@ -107,28 +107,28 @@
       border-left: 1px solid color(_dark);
       // }
 
-      @media screen and (max-width: 480px) {
-        padding-left: res480(10px);
+      @media screen and (min-width: 437px) {
+        padding-left: res(10px);
       }
     }
     &:not(:last-child) {
       // @media screen and (min-width: 425px) {
-      padding-right: res480(10px);
+      padding-right: res437(10px);
       // }
 
-      @media screen and (max-width: 480px) {
-        padding-right: res480(10px);
+      @media screen and (min-width: 437px) {
+        padding-right: res(10px);
       }
     }
   }
   &__social-link {
     font-weight: 500;
-    font-size: res480(18px);
-    line-height: res480(1.22);
+    font-size: res437(18px);
+    line-height: res437(1.22);
     letter-spacing: 0.02em;
     color: color(_blue);
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 437px) {
       font-size: res(18px);
       line-height: res(1.22);
       letter-spacing: 0.02em;

@@ -29,16 +29,8 @@
   @return (calc($n * var(--coef)));
 }
 
-@function res480($n) {
-  $n: @if
-    (
-      (calc($n * 1.19 * var(--window-client-width) / 480)) <
-        (calc($n * var(--window-client-width) / 357))
-    ) {
-    @return (calc($n * 1.19 * var(--window-client-width) / 480));
-  }
-
-  @return res($n);
+@function res437($n) {
+  @return (calc($n * var(--window-client-width) / 437));
 }
 
 $content-width: 1200px;

@@ -4,6 +4,7 @@
   height: 100%;
   top: 0;
   left: 0;
+  overflow: auto;
   z-index: 1;
   background-color: color(_backdrop);
   box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);

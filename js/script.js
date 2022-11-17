@@ -23,8 +23,10 @@
       document.documentElement.style.setProperty('--coef', coef);
     } else if (windowInnerWidth >= 480 || windowInnerWidth <= 424) {
       document.documentElement.style.setProperty('--coef', coef);
-    } else if (windowInnerWidth > 360) {
-      coef = windowClientWidth / 480;
+    } else if (windowInnerWidth < 320) {
+      coef = windowClientWidth / 320;
+      document.documentElement.style.setProperty('--coef', coef);
+    } else {
       document.documentElement.style.setProperty('--coef', coef);
     }
 
