@@ -18,10 +18,8 @@
     document.documentElement.style.setProperty('--scrollbar-width', scrollbar);
 
     if (windowInnerWidth > 1600) {
-      coef = (1600 - scrollbar) / 1200;
       document.documentElement.style.setProperty('--coef', coef);
     } else if (windowInnerWidth > 1200) {
-      coef = windowClientWidth / 1200;
       document.documentElement.style.setProperty('--coef', coef);
     } else if (windowInnerWidth >= 480 || windowInnerWidth <= 424) {
       document.documentElement.style.setProperty('--coef', coef);
