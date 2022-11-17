@@ -1301,7 +1301,7 @@ html::-webkit-scrollbar-thumb {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .filters {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
