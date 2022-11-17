@@ -1,13 +1,18 @@
 .filters {
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: inline-flex;
   gap: res(15px) res(8px);
   justify-content: left;
   flex-wrap: wrap;
   @media screen and(min-width: 768px) {
+    margin-bottom: 30px;
     justify-content: center;
     flex-wrap: nowrap;
+  }
+
+  @media screen and(min-width: 768px) {
+    margin-bottom: 50px;
   }
 
   &__btn {

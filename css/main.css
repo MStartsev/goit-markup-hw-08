@@ -1290,7 +1290,7 @@ html::-webkit-scrollbar-thumb {
 
 .filters {
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1303,11 +1303,17 @@ html::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: 768px) {
   .filters {
+    margin-bottom: 30px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .filters {
+    margin-bottom: 50px;
   }
 }
 .filters__btn {
