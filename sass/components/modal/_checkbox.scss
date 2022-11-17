@@ -34,7 +34,8 @@
     color: color(_blue);
   }
 
-  &__icon {
+  &__icon,
+  &__icon--checked {
     left: 0;
 
     @media screen and(min-width: 1200px) {
@@ -49,7 +50,7 @@
 
   &__icon--checked,
   &__input:checked ~ &__icon {
-    opacity: 0;
+    display: none;
   }
 
   &:hover &__icon,
@@ -58,7 +59,7 @@
   }
 
   &__input:checked + &__icon--checked {
-    opacity: 1;
+    display: block;
     fill: color(_c-blue);
     --c-b: var(--color-white);
   }

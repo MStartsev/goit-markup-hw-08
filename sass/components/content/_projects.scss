@@ -31,9 +31,15 @@
       max-width: calc(354px * var(--coef));
     }
   }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+  }
 
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
     @include transition(box-shadow, 250ms, $cubic);

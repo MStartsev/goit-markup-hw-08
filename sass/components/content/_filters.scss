@@ -2,7 +2,7 @@
   width: 100%;
   margin-bottom: 50px;
   display: inline-flex;
-  gap: 15px 8px;
+  gap: res(15px) res(8px);
   justify-content: left;
   flex-wrap: wrap;
   @media screen and(min-width: 768px) {
@@ -13,13 +13,10 @@
   }
 
   &__btn {
-    padding: 6px 22px 6px 22px;
+    padding: res(6px) res(22px);
+    @include font-fw-fs-lh-ls(500, 16px, 1.62, 0.03em);
     border: none;
     border-radius: 4px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    letter-spacing: 0.03em;
     background: color(_l-grey);
     @include transition(color background-color box-shadow, 250ms, $cubic, 0ms 50ms 100ms);
 
