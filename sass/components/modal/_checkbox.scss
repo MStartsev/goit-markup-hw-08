@@ -4,11 +4,15 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: res(20px) 0 res(30px) 0;
+  margin: 10px 0 10px 0;
   font-size: res(12px);
   line-height: res(1.71);
   letter-spacing: 0.03em;
   color: color(_grey);
+
+  @media screen and(min-width: 425px) {
+    margin: 20px 0 30px 0;
+  }
 
   @media screen and(min-width: 1200px) {
     margin: res(20px) 0 res(30px) 0;

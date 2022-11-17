@@ -2,8 +2,15 @@
   width: 100%;
   margin-bottom: 50px;
   display: inline-flex;
-  gap: 8px;
-  justify-content: center;
+  gap: 15px 8px;
+  justify-content: left;
+  flex-wrap: wrap;
+  @media screen and(min-width: 768px) {
+  }
+  @media screen and(min-width: 1200px) {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
 
   &__btn {
     padding: 6px 22px 6px 22px;

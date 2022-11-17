@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
+    z-index: 9;
     max-width: var(--window-client-width);
     height: 100%;
     overflow: hidden;
@@ -38,7 +39,11 @@
   }
 
   &__wrap {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 425px) {
+      gap: 32px;
+      min-width: res(450px);
+    }
+    @media screen and (min-width: 426px) and (max-width: 767px) {
       gap: 64px;
       min-width: res(400px);
     }

@@ -14,45 +14,73 @@
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
-<body>
+<body class="js-o-hidden not-padding" data-o-hidden>
 
   <header class="header">
     <div class="container">
-      <div class="container-flex">
+      <div class="header__flex">
+        <a href="./" class="link logo header__logo" lang="en">Web<span class="header__logo--contrast">Studio</span></a>
 
-        <nav class="nav container-flex">
-          <a href="./" class="link logo nav__logo" lang="en">Web<span class="nav__logo--contrast">Studio</span></a>
-          <ul class="list nav__list container-flex">
-            <li class="item container-flex">
-              <a class="link nav__link" href="./">Студія</a>
-            </li>
-            <li class="item container-flex">
-              <a class="link nav__link nav__link--current" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="item container-flex">
-              <a class="link nav__link" href="#contacts">Контакти</a>
-            </li>
-          </ul>
-        </nav>
+        <button class="btn__menu-open pointer" type="button" data-menu-open>
+          <svg width="40" height="40">
+            <use href="./images/sprites/sprite.svg#i-menu"></use>
+          </svg>
+        </button>
 
-        <ul class="list address container-flex">
-          <li class="item container-flex">
-            <a class="link address__link header__link" href="mailto:info@devstudio.com">
-              <svg class="icon__mailto" width="16" height="12">
-                <use href="./images/sprites/sprite.svg#i-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="item container-flex">
-            <a class="link address__link header__link" href="tel:+380961111111">
-              <svg class="icon__tel" width="10" height="16">
-                <use href="./images/sprites/sprite.svg#i-vector"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+        <div class="menu menu__visually-hidden" data-menu>
+
+          <button class="btn__menu-close pointer" type="button" data-menu-close>
+            <svg width="20" height="20">
+              <use href="./images/sprites/sprite.svg#i-x"></use>
+            </svg>
+          </button>
+
+          <nav class="nav container-flex">
+
+            <ul class="list nav__list container-flex">
+              <li class="item container-flex">
+                <a class="link nav__link" href="./">Студія</a>
+              </li>
+              <li class="item container-flex">
+                <a class="link nav__link nav__link--current" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="item container-flex">
+                <a class="link nav__link" href="#contacts" data-menu-contacts>Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="menu__wrap container-flex">
+
+            <ul class="list address address__menu container-flex">
+              <li class="item container-flex">
+                <a class="link address__link menu__email header__link" href="mailto:info@devstudio.com">
+                  <svg class="icon__mailto" width="16" height="12">
+                    <use href="./images/sprites/sprite.svg#i-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="item container-flex">
+                <a class="link address__link menu__tel header__link" href="tel:+380961111111">
+                  <svg class="icon__tel" width="10" height="16">
+                    <use href="./images/sprites/sprite.svg#i-vector"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+
+            <ul class="list menu__social-list">
+              <li class="item menu__social-item"><a href="#" class="link menu__social-link">Instagram</a></li>
+              <li class="item menu__social-item"><a href="#" class="link menu__social-link">Twitter</a></li>
+              <li class="item menu__social-item"><a href="#" class="link menu__social-link">Facebook</a></li>
+              <li class="item menu__social-item"><a href="#" class="link menu__social-link">LinkedIn</a></li>
+            </ul>
+
+          </div>
+
+        </div>
 
       </div>
     </div>
@@ -83,9 +111,28 @@
         </ul>
 
         <ul class="list list-flex projects">
-          <li class="item web-site ">
+          <li class="item projects__item web-site ">
             <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
-              <img src="./images/portfolio/tehnokrack.jpg" alt="Презентація веб-сайту Технокряк" class="img">
+
+              <picture class="img">
+                <source srcset=" ./images/portfolio/tehnokrack370@2x.jpg 2x, ./images/portfolio/tehnokrack370@3x.jpg 3x"
+                  media="(min-width: 1600px)" />
+                <source
+                  srcset="./images/portfolio/tehnokrack370@1x.jpg 1x, ./images/portfolio/tehnokrack370@2x.jpg 2x, ./images/portfolio/tehnokrack370@3x.jpg 3x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/portfolio/tehnokrack370@1x.jpg 1x, ./images/portfolio/tehnokrack370@2x.jpg 2x, ./images/portfolio/tehnokrack370@3x.jpg 3x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/portfolio/tehnokrack354@1x.jpg 1x, ./images/portfolio/tehnokrack354@2x.jpg 2x, ./images/portfolio/tehnokrack354@3x.jpg 3x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/tehnokrack450@1x.jpg 1x, ./images/portfolio/tehnokrack450@2x.jpg 2x, ./images/portfolio/tehnokrack450@3x.jpg 3x"
+                  media="(max-width: 767px)" />
+                <img class="img projects__img" src="./images/portfolio/tehnokrack370@1x.jpg"
+                  alt="Презентація веб-сайту Технокряк" />
+              </picture>
+
               <div class="hover-box">
                 <p class="text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                   дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
@@ -97,9 +144,23 @@
 
             </a>
           </li>
-          <li class="item design">
+          <li class="item projects__item design">
             <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
-              <img src="./images/portfolio/poster.jpg" alt="Візуалізація ігрового моменту" class="img">
+              <picture class="img">
+                <source srcset=" ./images/portfolio/poster370@2x.jpg 2x, ./images/portfolio/poster370@3x.jpg 3x"
+                  media="(min-width: 1600px)" />
+                <source
+                  srcset="./images/portfolio/poster370@1x.jpg 1x, ./images/portfolio/poster370@2x.jpg 2x, ./images/portfolio/poster370@3x.jpg 3x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/portfolio/poster354@1x.jpg 1x, ./images/portfolio/poster354@2x.jpg 2x, ./images/portfolio/poster354@3x.jpg 3x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/poster450@1x.jpg 1x, ./images/portfolio/poster450@2x.jpg 2x, ./images/portfolio/poster450@3x.jpg 3x"
+                  media="(max-width: 767px)" />
+                <img class="img projects__img" src="./images/portfolio/poster370@1x.jpg"
+                  alt="Візуалізація ігрового моменту" width="370" />
+              </picture>
               <div class="hover-box">
                 <p class="text">New Orlean переможе!!!</p>
               </div>
@@ -110,9 +171,23 @@
 
             </a>
           </li>
-          <li class="item application">
+          <li class="item projects__item application">
             <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
-              <img src="./images/portfolio/seafood.jpg" alt="Логотип ресторану" class="img">
+              <picture class="img">
+                <source srcset=" ./images/portfolio/seafood370@2x.jpg 2x, ./images/portfolio/seafood370@3x.jpg 3x"
+                  media="(min-width: 1600px)" />
+                <source
+                  srcset="./images/portfolio/seafood370@1x.jpg 1x, ./images/portfolio/seafood370@2x.jpg 2x, ./images/portfolio/seafood370@3x.jpg 3x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/portfolio/seafood354@1x.jpg 1x, ./images/portfolio/seafood354@2x.jpg 2x, ./images/portfolio/seafood354@3x.jpg 3x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/seafood450@1x.jpg 1x, ./images/portfolio/seafood450@2x.jpg 2x, ./images/portfolio/seafood450@3x.jpg 3x"
+                  media="(max-width: 767px)" />
+                <img class="img projects__img" src="./images/portfolio/seafood370@1x.jpg" alt="Логотип ресторану"
+                  width="370" />
+              </picture>
               <div class="hover-box">
                 <p class="text">Смачна рибка.</p>
               </div>
@@ -123,9 +198,24 @@
 
             </a>
           </li>
-          <li class="item marketing">
+          <li class="item projects__item marketing">
             <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
-              <img src="./images/portfolio/prime.jpg" alt="Фото продукції" class="img">
+              <picture class="img">
+                <source srcset=" ./images/portfolio/prime370@2x.jpg 2x, ./images/portfolio/prime370@3x.jpg 3x"
+                  media="(min-width: 1600px)" />
+                <source
+                  srcset="./images/portfolio/prime370@1x.jpg 1x, ./images/portfolio/prime370@2x.jpg 2x, ./images/portfolio/prime370@3x.jpg 3x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/portfolio/prime354@1x.jpg 1x, ./images/portfolio/prime354@2x.jpg 2x, ./images/portfolio/prime354@3x.jpg 3x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/prime450@1x.jpg 1x, ./images/portfolio/prime450@2x.jpg 2x, ./images/portfolio/prime450@3x.jpg 3x"
+                  media="(max-width: 767px)" />
+                <img class="img projects__img" src="./images/portfolio/prime370@1x.jpg" alt="Фото продукції"
+                  width="370" />
+              </picture>
+
               <div class="hover-box">
                 <p class="text">Тілько у нас найкращі у світі вуха!</p>
               </div>
@@ -135,9 +225,23 @@
               </div>
             </a>
           </li>
-          <li class="item application">
+          <li class="item projects__item application">
             <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
-              <img src="./images/portfolio/boxes.jpg" alt="Візуалізація продукту" class="img">
+              <picture class="img">
+                <source srcset=" ./images/portfolio/boxes370@2x.jpg 2x, ./images/portfolio/boxes370@3x.jpg 3x"
+                  media="(min-width: 1600px)" />
+                <source
+                  srcset="./images/portfolio/boxes370@1x.jpg 1x, ./images/portfolio/boxes370@2x.jpg 2x, ./images/portfolio/boxes370@3x.jpg 3x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/portfolio/boxes354@1x.jpg 1x, ./images/portfolio/boxes354@2x.jpg 2x, ./images/portfolio/boxes354@3x.jpg 3x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/boxes450@1x.jpg 1x, ./images/portfolio/boxes450@2x.jpg 2x, ./images/portfolio/boxes450@3x.jpg 3x"
+                  media="(max-width: 767px)" />
+                <img class="img projects__img" src="./images/portfolio/boxes370@1x.jpg" alt="Візуалізація продукту"
+                  width="370" />
+              </picture>
               <div class="hover-box">
                 <p class="text">Знайдемо розмір під Вас!</p>
               </div>
@@ -147,9 +251,24 @@
               </div>
             </a>
           </li>
-          <li class="item web-site">
+          <li class="item projects__item web-site">
             <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
-              <img src="./images/portfolio/inspiration.jpg" alt="Презентація десктопної версії веб-сайту" class="img">
+              <picture class="img">
+                <source
+                  srcset=" ./images/portfolio/inspiration370@2x.jpg 2x, ./images/portfolio/inspiration370@3x.jpg 3x"
+                  media="(min-width: 1600px)" />
+                <source
+                  srcset="./images/portfolio/inspiration370@1x.jpg 1x, ./images/portfolio/inspiration370@2x.jpg 2x, ./images/portfolio/inspiration370@3x.jpg 3x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/portfolio/inspiration354@1x.jpg 1x, ./images/portfolio/inspiration354@2x.jpg 2x, ./images/portfolio/inspiration354@3x.jpg 3x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/inspiration450@1x.jpg 1x, ./images/portfolio/inspiration450@2x.jpg 2x, ./images/portfolio/inspiration450@3x.jpg 3x"
+                  media="(max-width: 767px)" />
+                <img class="img projects__img" src="./images/portfolio/inspiration370@1x.jpg"
+                  alt="Презентація десктопної версії веб-сайту" width="370" />
+              </picture>
               <div class="hover-box">
                 <p class="text">Тепер користуватись стало ще зручніше</p>
               </div>
@@ -159,9 +278,24 @@
               </div>
             </a>
           </li>
-          <li class="item design">
+          <li class="item projects__item design">
             <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
-              <img src="./images/portfolio/limitededition.jpg" alt="Фото сторінок видання" class="img">
+              <picture class="img">
+                <source
+                  srcset=" ./images/portfolio/limitededition370@2x.jpg 2x, ./images/portfolio/limitededition370@3x.jpg 3x"
+                  media="(min-width: 1600px)" />
+                <source
+                  srcset="./images/portfolio/limitededition370@1x.jpg 1x, ./images/portfolio/limitededition370@2x.jpg 2x, ./images/portfolio/limitededition370@3x.jpg 3x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/portfolio/limitededition354@1x.jpg 1x, ./images/portfolio/limitededition354@2x.jpg 2x, ./images/portfolio/limitededition354@3x.jpg 3x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/limitededition450@1x.jpg 1x, ./images/portfolio/limitededition450@2x.jpg 2x, ./images/portfolio/limitededition450@3x.jpg 3x"
+                  media="(max-width: 767px)" />
+                <img class="img projects__img" src="./images/portfolio/limitededition370@1x.jpg"
+                  alt="Презентація десктопної версії веб-сайту" width="370" />
+              </picture>
               <div class="hover-box">
                 <p class="text">Про все на світі</p>
               </div>
@@ -171,9 +305,23 @@
               </div>
             </a>
           </li>
-          <li class="item marketing">
+          <li class="item projects__item marketing">
             <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
-              <img src="./images/portfolio/lab.jpg" alt="Розробка концепції проекту" class="img">
+              <picture class="img">
+                <source srcset=" ./images/portfolio/lab370@2x.jpg 2x, ./images/portfolio/lab370@3x.jpg 3x"
+                  media="(min-width: 1600px)" />
+                <source
+                  srcset="./images/portfolio/lab370@1x.jpg 1x, ./images/portfolio/lab370@2x.jpg 2x, ./images/portfolio/lab370@3x.jpg 3x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/portfolio/lab354@1x.jpg 1x, ./images/portfolio/lab354@2x.jpg 2x, ./images/portfolio/lab354@3x.jpg 3x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/lab450@1x.jpg 1x, ./images/portfolio/lab450@2x.jpg 2x, ./images/portfolio/lab450@3x.jpg 3x"
+                  media="(max-width: 767px)" />
+                <img class="img projects__img" src="./images/portfolio/lab370@1x.jpg" alt="Розробка концепції проекту"
+                  width="370" />
+              </picture>
               <div class="hover-box">
                 <p class="text">Вишукані прикраси лише ТУТ!</p>
               </div>
@@ -183,9 +331,23 @@
               </div>
             </a>
           </li>
-          <li class="item application">
+          <li class="item projects__item application">
             <a class="link projects__link" href="#" target="_blank" rel="noopener noreferrer">
-              <img src="./images/portfolio/business.jpg" alt="Візуалізація продукту" class="img">
+              <picture class="img">
+                <source srcset=" ./images/portfolio/business370@2x.jpg 2x, ./images/portfolio/business370@3x.jpg 3x"
+                  media="(min-width: 1600px)" />
+                <source
+                  srcset="./images/portfolio/business370@1x.jpg 1x, ./images/portfolio/business370@2x.jpg 2x, ./images/portfolio/business370@3x.jpg 3x"
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="./images/portfolio/business354@1x.jpg 1x, ./images/portfolio/business354@2x.jpg 2x, ./images/portfolio/business354@3x.jpg 3x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/business450@1x.jpg 1x, ./images/portfolio/business450@2x.jpg 2x, ./images/portfolio/business450@3x.jpg 3x"
+                  media="(max-width: 767px)" />
+                <img class="img projects__img" src="./images/portfolio/business370@1x.jpg" alt="Візуалізація продукту"
+                  width="370" />
+              </picture>
               <div class="hover-box">
                 <p class="text">Допоможемо розвинути Ваш бізнес</p>
               </div>
@@ -206,7 +368,7 @@
     <div class="container">
       <div class="footer__flex">
 
-        <div>
+        <div class="footer__flex-item">
           <a href="./" class="link logo footer__logo" lang="en">Web<span
               class="footer__logo--contrast">Studio</span></a>
           <address id="contacts" class="address">
@@ -274,6 +436,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="./js/script.js"></script>
 
 </body>
 

@@ -81,9 +81,12 @@
   }
 
   &__textarea {
-    height: res(118px);
+    height: res(92px);
     padding: res(12px) res(16px);
     resize: none;
+    @media screen and(min-width: 425px) {
+      height: res(118px);
+    }
 
     &:hover,
     &:focus,

@@ -1,5 +1,6 @@
 .projects {
-  justify-content: center;
+  display: flex;
+  align-items: stretch;
 
   &__title {
     margin: 0;
@@ -9,6 +10,26 @@
     margin: 4px 0 0 0;
     @include font-fw-fs-lh-ls(400, 16px, 1.88, 0.03em);
     color: color(_grey);
+  }
+
+  &__img {
+    width: calc(450px * var(--coef));
+
+    @media screen and (min-width: 768px) {
+      width: calc(354px * var(--coef));
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc(370px * var(--coef));
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      display: flex;
+      align-items: stretch;
+      max-width: calc(354px * var(--coef));
+    }
   }
 
   &__link {
