@@ -405,8 +405,14 @@ html::-webkit-scrollbar-thumb {
   }
 }
 .header__logo {
-  padding-top: calc(25px * var(--coef));
-  padding-bottom: calc(24px * var(--coef));
+  padding-top: calc(16px * var(--coef));
+  padding-bottom: calc(15px * var(--coef));
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding-top: calc(25px * var(--coef));
+    padding-bottom: calc(24px * var(--coef));
+  }
 }
 .header__logo--contrast {
   color: #000000;
