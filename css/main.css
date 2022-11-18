@@ -362,20 +362,8 @@ html::-webkit-scrollbar-thumb {
 .header {
   margin-inline: auto;
   border-bottom: 1px solid #ececec;
-  max-width: var(--mobile);
-}
-@media screen and (min-width: 768px) {
-  .header {
-    max-width: var(--tablet);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header {
-    max-width: 100%;
-  }
 }
 .header__flex {
-  max-width: 1170px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,11 +384,13 @@ html::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: 768px) {
   .header__flex {
+    max-width: 738px;
     gap: 87px;
   }
 }
 @media screen and (min-width: 1200px) {
   .header__flex {
+    max-width: 1170px;
     gap: calc(93px * var(--coef));
   }
 }
