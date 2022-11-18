@@ -390,7 +390,6 @@ html::-webkit-scrollbar-thumb {
 }
 @media screen and (min-width: 1200px) {
   .header__flex {
-    max-width: 1170px;
     gap: calc(93px * var(--coef));
   }
 }
