@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   opacity: 1;
-  @include transition(opacity, 350ms, $cubic);
+  @include transition(opacity transform, 350ms, $cubic);
 
   @media screen and (max-width: 767px) {
     padding: 48px res(40px);
@@ -12,8 +12,6 @@
     z-index: 9;
     max-width: var(--window-client-width);
     height: 100%;
-    // overflow-x: hidden;
-    // overflow-y: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -24,30 +22,15 @@
     padding: 48px res437(40px);
   }
 
-  // @media screen and (max-width: 425px) {
-  //   padding-inline: calc(40px * (var(--window-client-width) / 425));
-  // }
-
   &__visually-hidden {
     @media screen and (max-width: 767px) {
-      width: 1px;
-      height: 1px;
-      opacity: 0;
-      white-space: nowrap;
-      overflow: hidden;
-      border: 0;
-      padding: 0;
-      clip: rect(0 0 0 0);
-      clip-path: inset(50%);
-      margin: -1px;
+      transform: translate(-50%, -150%) scale(1);
+      opacity: 0.9;
+      @include transition(opacity transform, 350ms, $cubic);
     }
   }
 
   &__wrap {
-    // @media screen and (max-width: 425px) {
-    //   gap: 32px;
-    //   min-width: res(450px);
-    // }
     @media screen and (max-width: 767px) {
       gap: 64px;
       min-width: res(400px);
@@ -67,10 +50,6 @@
       font-size: res437(24px);
       line-height: res437(1.17);
     }
-
-    // @media screen and (max-width: 425px) {
-    //   font-size: calc(30px * (var(--window-client-width) / 425));
-    // }
   }
 
   &__tel {
@@ -83,38 +62,27 @@
       font-size: res437(34px);
       line-height: res437(1.18);
     }
-
-    // @media screen and (max-width: 425px) {
-    //   font-size: calc(34px * (var(--window-client-width) / 425));
-    // }
   }
 
   &__social-list {
     display: flex;
-    // flex-direction: column;
 
-    // @media screen and (min-width: 425px) {
     flex-direction: row;
-    // }
   }
 
   &__social-item {
     height: 22px;
 
     &:not(:first-child) {
-      // @media screen and (min-width: 425px) {
       padding-left: res(10px);
       border-left: 1px solid color(_dark);
-      // }
 
       @media screen and (min-width: 437px) {
         padding-left: res(10px);
       }
     }
     &:not(:last-child) {
-      // @media screen and (min-width: 425px) {
       padding-right: res437(10px);
-      // }
 
       @media screen and (min-width: 437px) {
         padding-right: res(10px);

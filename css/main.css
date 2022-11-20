@@ -526,8 +526,10 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   width: 100%;
   opacity: 1;
-  -webkit-transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -webkit-transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 @media screen and (max-width: 767px) {
   .menu {
@@ -557,17 +559,13 @@ html::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 767px) {
   .menu__visually-hidden {
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-            clip-path: inset(50%);
-    margin: -1px;
+    -webkit-transform: translate(-50%, -150%) scale(1);
+            transform: translate(-50%, -150%) scale(1);
+    opacity: 0.9;
+    -webkit-transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 350ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
 }
 @media screen and (max-width: 767px) {
